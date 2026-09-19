@@ -1,0 +1,1813 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Systems Thinking Competency Workbench</title>
+<meta name="description" content="An interactive walkthrough of the UPM Systems Thinking Competency module (SIM-ESD-ST-01): choose your discipline cluster and every example, method and rubric is written for your own course.">
+<meta name="author" content="PEMACU ESD, Universiti Putra Malaysia">
+<meta property="og:title" content="Systems Thinking Competency Workbench">
+<meta property="og:description" content="From what the Systems Thinking competency means, through the pedagogy that develops it, to a rubric that survives an audit - written for your discipline.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230B4E86'/%3E%3Ctext y='72' x='50' text-anchor='middle' font-size='60' font-family='Georgia,serif' fill='%23fff'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+img,svg{max-width:100%;height:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+</style>
+</head>
+<body>
+<style>
+:root{
+  --ground:#E8EFF7;
+  --surface:#FFFFFF;
+  --surface-2:#EFF5FB;
+  --ink:#08131C;
+  --ink-2:#243B50;
+  --ink-3:#4C6479;
+  --line:#BACBDD;
+  --line-2:#D8E5F0;
+  --blue:#0B4E86;
+  --blue-deep:#08304F;
+  --blue-tint:#CFE3F6;
+  --teal:#04665A;
+  --teal-tint:#C9E7E1;
+  --amber:#7C5206;
+  --amber-tint:#F7E5C4;
+  --rose:#98281F;
+  --rose-tint:#FBD8D4;
+  --violet:#4A2C8C;
+  --violet-tint:#E2D9F7;
+  --shadow:0 1px 2px rgba(21,32,41,.05), 0 8px 24px -16px rgba(21,32,41,.28);
+  --radius:6px;
+  --sans:"IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif:"Spectral", Georgia, "Times New Roman", serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#080E15;
+    --surface:#111C27;
+    --surface-2:#182533;
+    --ink:#F5F9FD;
+    --ink-2:#D2E0EC;
+    --ink-3:#A3B8CB;
+    --line:#35485C;
+    --line-2:#2A3949;
+    --blue:#9CCEF5;
+    --blue-deep:#C6E4FA;
+    --blue-tint:#153048;
+    --teal:#8CDCCF;
+    --teal-tint:#0E3230;
+    --amber:#F0C978;
+    --amber-tint:#362B14;
+    --rose:#F8ADA4;
+    --rose-tint:#3B2320;
+    --violet:#C4B4F0;
+    --violet-tint:#2A2244;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#080E15;
+  --surface:#111C27;
+  --surface-2:#182533;
+  --ink:#F5F9FD;
+  --ink-2:#D2E0EC;
+  --ink-3:#A3B8CB;
+  --line:#35485C;
+  --line-2:#2A3949;
+  --blue:#9CCEF5;
+  --blue-deep:#C6E4FA;
+  --blue-tint:#153048;
+  --teal:#8CDCCF;
+  --teal-tint:#0E3230;
+  --amber:#F0C978;
+  --amber-tint:#362B14;
+  --rose:#F8ADA4;
+  --rose-tint:#3B2320;
+  --violet:#C4B4F0;
+  --violet-tint:#2A2244;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;text-wrap:balance;margin:0;line-height:1.2}
+p{margin:0}
+a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:3px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- shell ---------- */
+.shell{display:flex;min-height:100vh;align-items:stretch}
+
+.rail{
+  width:274px;flex:0 0 274px;
+  background:var(--surface);
+  border-right:1px solid var(--line);
+  display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+}
+.brand{padding:22px 20px 16px;border-bottom:1px solid var(--line-2)}
+.brand .code{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-2);display:block;margin-bottom:8px;
+}
+.brand h1{font-size:19px;letter-spacing:-.01em}
+.brand .sub{font-size:12.5px;color:var(--ink-3);margin-top:6px;line-height:1.45}
+
+.picker{padding:16px 20px;border-bottom:1px solid var(--line-2);background:var(--surface-2)}
+.picker label{
+  font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-2);display:block;margin-bottom:7px;
+}
+.picker select{
+  width:100%;font-family:var(--sans);font-size:13.5px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:8px 9px;line-height:1.3;
+}
+.picker .hint{font-size:12px;color:var(--ink-2);margin-top:7px;line-height:1.4}
+
+nav{padding:14px 12px 8px;flex:1}
+.navgroup{
+  font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink-2);padding:15px 9px 6px;
+}
+.navgroup:first-child{padding-top:2px}
+.navbtn{
+  display:flex;align-items:baseline;gap:10px;width:100%;text-align:left;
+  background:none;border:0;border-radius:var(--radius);
+  padding:7px 9px;cursor:pointer;color:var(--ink-2);
+  font-family:var(--sans);font-size:14px;line-height:1.35;
+  transition:background .12s,color .12s;
+}
+.navbtn:hover{background:var(--surface-2);color:var(--ink)}
+.navbtn .ref{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--ink-2);flex:0 0 28px;letter-spacing:0;font-variant-numeric:tabular-nums}
+.navbtn.on{background:var(--blue-tint);color:var(--blue-deep);font-weight:500}
+.navbtn.on .ref{color:var(--blue-deep)}
+.navbtn.done .ref::after{content:"·";margin-left:2px;color:var(--teal);font-weight:700}
+
+.railfoot{padding:12px 20px 20px;border-top:1px solid var(--line-2);display:flex;flex-direction:column;gap:8px}
+.progressline{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.07em;color:var(--ink-2);text-transform:uppercase}
+.bar{height:3px;background:var(--line-2);border-radius:2px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--teal);width:0;transition:width .3s}
+
+.mobilebar{display:none}
+
+/* ---------- main ---------- */
+main{flex:1;min-width:0;padding:0 0 96px}
+.wrap{max-width:900px;padding:44px 44px 0;margin:0 auto}
+section.view{display:none;animation:fade .22s ease-out}
+section.view.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.eyebrow{
+  font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.085em;text-transform:uppercase;
+  color:var(--blue-deep);display:flex;align-items:center;gap:10px;margin-bottom:14px;
+}
+.eyebrow::after{content:"";height:1px;flex:1;background:var(--line)}
+h2.title{font-size:31px;letter-spacing:-.015em;margin-bottom:12px}
+.lede{font-size:17px;color:var(--ink-2);max-width:62ch;line-height:1.55}
+.lede.serif{font-family:var(--serif);font-size:18.5px;color:var(--ink)}
+
+h3{font-size:20px;margin:38px 0 4px;letter-spacing:-.01em}
+h3 .num{font-family:var(--mono);font-size:12.5px;color:var(--ink-2);margin-right:9px;letter-spacing:0;font-weight:500}
+h3 .secnum{font-family:var(--mono);font-size:14.5px;color:var(--blue-deep);margin-right:10px;letter-spacing:0;font-weight:600;font-variant-numeric:tabular-nums}
+h4{font-size:15.5px;margin:24px 0 4px;font-family:var(--sans);font-weight:600}
+.body{max-width:66ch;color:var(--ink-2);margin-top:10px}
+.body strong{color:var(--ink);font-weight:600}
+.body + .body{margin-top:12px}
+.stack{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+.stack.tight{gap:8px}
+
+/* panels */
+.panel{
+  border-radius:var(--radius);padding:16px 18px;
+  border:1px solid var(--line);background:var(--surface);
+  display:flex;flex-direction:column;gap:8px;
+}
+.panel .tag{
+  font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+}
+.panel p, .panel li{font-size:14.5px;color:var(--ink-2);line-height:1.55}
+.panel strong{color:var(--ink)}
+.panel ul,.panel ol{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:5px}
+.p-def{background:var(--amber-tint);border-color:transparent;border-left:3px solid var(--amber)}
+.p-def .tag{color:var(--amber)}
+.p-def em{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--ink);line-height:1.5}
+.p-rule{background:var(--violet-tint);border-color:transparent;border-left:3px solid var(--violet)}
+.p-rule .tag{color:var(--violet)}
+.p-step{background:var(--teal-tint);border-color:transparent;border-left:3px solid var(--teal)}
+.p-step .tag{color:var(--teal)}
+.p-warn{background:var(--rose-tint);border-color:transparent;border-left:3px solid var(--rose)}
+.p-warn .tag{color:var(--rose)}
+.p-note{background:var(--surface-2)}
+.p-note .tag{color:var(--ink-3)}
+
+/* tables */
+.tablewrap{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+th{
+  text-align:left;background:var(--blue-deep);color:#fff;
+  font-family:var(--sans);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+  padding:10px 12px;vertical-align:bottom;
+}
+:root[data-theme="dark"] th{background:#26425A;color:var(--ink)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) th{background:#26425A;color:var(--ink)}}
+td{padding:10px 12px;border-top:1px solid var(--line);color:var(--ink-2);vertical-align:top;line-height:1.5}
+tbody tr:nth-child(even){background:var(--surface-2)}
+td.k{color:var(--ink);font-weight:600;white-space:nowrap}
+td.k.wrap{white-space:normal}
+td .mono,.mono{font-family:var(--mono);font-size:12.5px}
+.crit-n{font-family:var(--mono);color:var(--blue-deep);font-weight:600;font-size:13px}
+.mlcode{
+  font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.02em;
+  color:var(--blue-deep);background:var(--blue-tint);border-radius:4px;padding:3px 7px;
+  display:inline-block;
+}
+table.levels{min-width:880px;table-layout:fixed}
+table.levels td:first-child,table.levels th:first-child{width:132px}
+table.worked{min-width:1140px}
+table.worked td:nth-child(2),table.worked th:nth-child(2){width:150px}
+h3 .chip{
+  font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--blue);background:var(--blue-tint);border-radius:20px;padding:3px 9px;
+  margin-left:10px;vertical-align:2px;font-weight:500;
+}
+
+/* cards */
+.grid{display:grid;gap:12px;margin-top:16px}
+.grid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 15px;display:flex;flex-direction:column;gap:6px;
+}
+.card .n{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--blue-deep);letter-spacing:.05em}
+.card h5{margin:0;font-size:14.5px;font-weight:600;font-family:var(--sans);color:var(--ink);line-height:1.3}
+.card p{font-size:13.5px;color:var(--ink-2);line-height:1.5}
+.card.accent{border-top:2px solid var(--blue)}
+
+/* chain / steps */
+.chain{display:flex;flex-direction:column;gap:0;margin-top:18px}
+.link{
+  display:flex;gap:0;align-items:stretch;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+}
+.link .no{
+  flex:0 0 42px;display:flex;align-items:center;justify-content:center;
+  background:var(--teal);color:#fff;font-family:var(--mono);font-size:14px;font-weight:500;
+}
+.link.given .no{background:var(--ink-3)}
+.link .txt{padding:11px 14px;flex:1;min-width:0}
+.link .txt b{display:block;font-size:14.5px;color:var(--ink);font-weight:600}
+.link .txt span{font-size:13.5px;color:var(--ink-2)}
+.link .meta{
+  flex:0 0 auto;padding:11px 14px;align-self:center;
+  font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-align:right;
+}
+.tick{height:12px;display:flex;justify-content:center;align-items:center;color:var(--line)}
+.tick svg{display:block}
+
+.fixedrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+.fixedrow div{
+  background:var(--surface-2);border:1px solid var(--line-2);border-radius:var(--radius);
+  padding:11px 12px;border-top:2px solid var(--ink-3);
+}
+.fixedrow b{display:block;font-size:13.5px;color:var(--ink);font-weight:600}
+.fixedrow span{font-size:13px;color:var(--ink-2)}
+
+/* controls */
+.btn{
+  font-family:var(--sans);font-size:13px;font-weight:500;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line);
+  border-radius:var(--radius);padding:7px 13px;cursor:pointer;
+  transition:background .12s,border-color .12s;
+}
+.btn:hover{background:var(--surface-2);border-color:var(--ink-3)}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.pf.drafted{border-left:3px solid var(--amber);background:var(--amber-tint)}
+.aibox{margin:10px 0 0}
+.aibox textarea{width:100%;min-height:110px;font-family:inherit}
+#aiprompt{min-height:200px;font-size:.85rem;line-height:1.45}
+.ainote{font-size:.85rem;color:var(--ink-3);margin:8px 0 0}
+.aistep{display:flex;gap:10px;align-items:flex-start;margin:0 0 12px}
+.aistep .num{flex:0 0 22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;
+  font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+:root[data-theme="dark"] .aistep .num{color:#080E15}
+.aistep .txt{flex:1;min-width:0}
+
+#printview{display:none}
+@media print{
+  @page{margin:18mm 16mm}
+  body>*{display:none !important}
+  #printview{display:block !important;color:#000;background:#fff;font-size:11pt;line-height:1.5}
+  #printview h1{font-size:16pt;margin:0 0 2pt}
+  #printview .pmeta{font-size:9.5pt;color:#444;margin:0 0 14pt;padding-bottom:8pt;border-bottom:1pt solid #000}
+  #printview .pitem{margin:0 0 11pt;page-break-inside:avoid;break-inside:avoid}
+  #printview .plab{font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#333;margin:0 0 2pt}
+  #printview .pval{margin:0;white-space:pre-wrap}
+  #printview .pempty{color:#777;font-style:italic}
+  #printview .pchecks{margin-top:16pt;padding-top:8pt;border-top:1pt solid #000;page-break-inside:avoid}
+  #printview .pchecks h2{font-size:11pt;margin:0 0 5pt}
+  #printview .pchecks li{margin:0 0 4pt}
+  #printview .pfoot{margin-top:14pt;padding-top:6pt;border-top:.5pt solid #999;font-size:8.5pt;color:#555}
+}
+:root[data-theme="dark"] .btn.primary{color:#080E15}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#080E15}}
+.btn.primary:hover{background:var(--blue-deep);border-color:var(--blue-deep)}
+.btn.sm{font-size:12px;padding:5px 10px}
+.btn[aria-pressed="true"]{background:var(--blue-tint);border-color:var(--blue);color:var(--blue-deep)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+
+/* quiz */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.q .qhead{display:flex;gap:11px;align-items:baseline}
+.q .qn{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--blue-deep);flex:0 0 auto}
+.q .qtext{font-size:14.5px;color:var(--ink);line-height:1.5}
+.q .opts{display:flex;flex-wrap:wrap;gap:6px}
+.q .fb{
+  display:none;font-size:13.5px;line-height:1.55;padding:10px 12px;border-radius:var(--radius);
+  background:var(--surface-2);color:var(--ink-2);border-left:3px solid var(--line);
+}
+.q .fb.show{display:block}
+.q .fb.right{background:var(--teal-tint);border-color:var(--teal)}
+.q .fb.wrong{background:var(--rose-tint);border-color:var(--rose)}
+.q .fb b{color:var(--ink)}
+.score{
+  display:flex;align-items:baseline;gap:12px;margin-top:18px;padding:13px 16px;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+}
+.score .big{font-family:var(--mono);font-size:24px;color:var(--blue);font-variant-numeric:tabular-nums}
+.score .lbl{font-size:13.5px;color:var(--ink-2)}
+.reveal{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.reveal > button{
+  width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:13px 16px;
+  display:flex;gap:11px;align-items:baseline;font-family:var(--sans);color:var(--ink);
+}
+.reveal > button:hover{background:var(--surface-2)}
+.reveal .qn{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--blue-deep);flex:0 0 auto}
+.reveal .qt{font-size:14.5px;line-height:1.5;flex:1}
+.reveal .chev{color:var(--ink-3);font-family:var(--mono);font-size:12px}
+.reveal .ans{display:none;padding:0 16px 14px 42px;flex-direction:column;gap:6px}
+.reveal.open .ans{display:flex}
+.reveal .verdict{font-size:14px;color:var(--ink);font-weight:600}
+.reveal .why{font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.reveal .cluster{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-deep)}
+
+/* checklist */
+.check{display:flex;flex-direction:column;gap:2px;margin-top:16px}
+.check label{
+  display:flex;gap:11px;align-items:flex-start;padding:9px 12px;border-radius:var(--radius);
+  cursor:pointer;font-size:14px;color:var(--ink-2);line-height:1.5;
+}
+.check label:hover{background:var(--surface-2)}
+.check input{margin:3px 0 0;accent-color:var(--teal);width:15px;height:15px;flex:0 0 auto}
+.check input:checked + span{color:var(--ink-3);text-decoration:line-through}
+
+/* accordion methods */
+.method{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.method > button{
+  width:100%;display:flex;gap:12px;align-items:center;text-align:left;
+  background:none;border:0;cursor:pointer;padding:12px 15px;font-family:var(--sans);
+}
+.method > button:hover{background:var(--surface-2)}
+.method .mid{font-family:var(--mono);font-size:13.5px;color:var(--blue-deep);font-weight:600;flex:0 0 36px}
+.method .mname{font-size:14.5px;color:var(--ink);font-weight:600;flex:1}
+.method .fam{
+  font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);
+  border:1px solid var(--line);border-radius:20px;padding:2px 8px;
+}
+.method .spec{display:none;border-top:1px solid var(--line-2);padding:4px 15px 15px}
+.method.open .spec{display:block}
+.spec dl{margin:0;display:grid;grid-template-columns:150px 1fr;gap:0}
+.spec dt{
+  font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);
+  padding:10px 12px 10px 0;border-top:1px solid var(--line-2);
+}
+.spec dd{margin:0;padding:10px 0;border-top:1px solid var(--line-2);font-size:14px;color:var(--ink-2);line-height:1.55}
+.spec dd strong{color:var(--ink)}
+
+/* builder */
+.field{display:flex;flex-direction:column;gap:5px;margin-top:14px}
+.field label{font-size:13px;font-weight:600;color:var(--ink)}
+.field .help{font-size:12.5px;color:var(--ink-2);line-height:1.45}
+.field input,.field textarea,.field select{
+  font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);padding:9px 11px;line-height:1.5;width:100%;
+}
+.field textarea{min-height:70px;resize:vertical}
+.outline{
+  font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink);
+  background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--blue);
+  border-radius:var(--radius);padding:16px 18px;margin-top:16px;
+  display:flex;flex-direction:column;gap:11px;
+}
+.outline mark{background:var(--blue-tint);color:var(--blue-deep);padding:0 3px;border-radius:2px;font-weight:500}
+.toast{
+  position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(70px);
+  background:var(--ink);color:var(--ground);font-size:13.5px;padding:9px 16px;border-radius:20px;
+  opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;z-index:60;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.pagefoot{
+  margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;
+  font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);
+}
+.jump{display:flex;gap:8px}
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px){
+  .grid.g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid.g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fixedrow{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 760px){
+  .shell{flex-direction:column}
+  .rail{
+    position:static;height:auto;width:100%;flex:none;border-right:0;border-bottom:1px solid var(--line);
+  }
+  .rail nav,.rail .railfoot,.rail .picker{display:none}
+  .rail.open nav,.rail.open .railfoot,.rail.open .picker{display:block}
+  .mobilebar{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:0 20px 16px}
+  .wrap{padding:26px 20px 0}
+  h2.title{font-size:25px}
+  .grid.g2,.grid.g3,.grid.g4{grid-template-columns:1fr}
+  .fixedrow{grid-template-columns:1fr}
+  .spec dl{grid-template-columns:1fr;gap:0}
+  .spec dt{padding-bottom:0;border-top:1px solid var(--line-2)}
+  .spec dd{padding-top:3px;border-top:0}
+  .link .meta{display:none}
+}
+</style>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <div class="brand">
+      <span class="code">UPM ESD Series · SIM-ESD-ST-01</span>
+      <h1>Systems Thinking Competency Workbench</h1>
+    </div>
+    <div class="mobilebar">
+      <button class="btn sm" id="menubtn" aria-expanded="false">Contents</button>
+      <span class="mono" style="color:var(--ink-3);font-size:11px" id="mobwhere">Start here</span>
+    </div>
+    <div class="picker">
+      <label for="cluster">Your discipline cluster</label>
+      <select id="cluster"></select>
+      <p class="hint">Choose your cluster to start the module.</p>
+    </div>
+    <nav id="nav"></nav>
+    <div class="railfoot">
+      <span class="progressline" id="progtext">0 of 11 sections opened</span>
+      <div class="bar"><i id="progbar"></i></div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="wrap" id="main"></div>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<div id="printview" aria-hidden="true"></div>
+
+<script>
+/* ============ FIXED CONTENT ============ */
+var CRIT = [
+  {n:"Boundary and elements", q:"Can the student state what is inside the system, and justify what was left out?", from:"Ability 2 - analyse complex systems."},
+  {n:"Interconnections", q:"Does the map trace a feedback loop between named elements, not just a chain of cause and effect?", from:"Ability 1 - recognise and understand relationships."},
+  {n:"Consequences across scale", q:"Is a consequence named that appears outside the mapped elements, or later in time?", from:"Ability 3 - think of how systems are embedded within different domains and different scales."},
+  {n:"Interpretation", q:"Does the student draw a defensible conclusion, and identify the leverage point the map reveals?", from:"Added by UPM so the map produces a usable conclusion. Also partly carries ability 4, deal with uncertainty."}
+];
+var LEVELS = ["1 Limited","2 Developing","3 Proficient","4 Exemplary"];
+var GENERIC = [
+  ["Lists factors. No boundary drawn.","Identifies the main elements. Boundary implied but not stated.","States the boundary and justifies what was excluded.","Justifies it, and shows how a different boundary would change the conclusion."],
+  ["Describes elements in isolation.","Notes one link, but only as cause and effect.","Traces a feedback loop, not just a chain.","Traces the loop and explains a delay or non-linear effect within it."],
+  ["Treats the system as having no side effects.","Names an effect on an element already inside the map.","Names a consequence appearing outside the mapped elements.","Traces consequences across scale or time and states the remaining uncertainty."],
+  ["Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies the leverage point it reveals."]
+];
+var METHODS = [
+  {id:"M1",n:"Problem-Based Learning",f:"Inquiry",do:"An open-ended problem with no single correct boundary.",sub:"A one-page reasoning log: the boundary I drew, why, what I excluded, what I would change.",also:"Critical Thinking, Integrated Problem-solving",
+   conflict:"The file is built so the boundary chosen changes the answer: what looks safe or optimal at a narrow boundary looks costly or wrong at a wider one.",
+   run:"Two sessions of 90 minutes, three weeks apart. Session A drafts a boundary and a map; independent reading between; session B revises both.",
+   prompt:"If you drew the boundary one level wider, what would you now have to include that you left out?",
+   watch:"Marking the map alone marks presentation. Mark the reasoning log."},
+  {id:"M2",n:"Jigsaw",f:"Inquiry",do:"Master one subsystem alone, then integrate it with others who cannot complete the map without it.",sub:"An individual note on my own subsystem, plus which other expert's argument changed where I drew the boundary or added a link.",also:"Collaboration",
+   conflict:"The material is built so the subsystems conflict at the point where they must be joined, and the joined boundary decides which subsystem's assumption wins.",
+   run:"60 minutes in expert groups, 60 minutes in home groups, 20 minutes comparing the boundaries drawn.",
+   prompt:"Which variable did your model treat as given, and what happens if it is not?",
+   watch:"If the components already agree, this is a comprehension test. Check the disagreement before issuing it."},
+  {id:"M3",n:"Project-Based Learning",f:"Project",do:"Weeks of work toward a system model or map for a real client or site.",sub:"A signed contribution record plus a two-page memo: the boundary chosen, the consequence that surfaced outside it, the leverage point.",also:"Strategic, Integrated Problem-solving",
+   conflict:"The boundary that makes the brief affordable is not the boundary that makes the recommendation defensible, and choosing between them is the actual task.",
+   run:"Four milestones: week 3 framing, week 6 boundary and options, week 9 client panel, week 11 final delivery.",
+   prompt:"What does a wider boundary show that your current one does not?",
+   watch:"A polished report hides a weak boundary decision. Assess at milestones; never let the report alone carry the mark."},
+  {id:"M4",n:"Design Thinking",f:"Project",do:"Build with real users or a real site, then be corrected by a consequence you did not anticipate.",sub:"A reframing memo: the boundary before and after contact, the consequence that forced the change, what is now excluded.",also:"Self-awareness, Strategic",
+   conflict:"The second round of contact is arranged so it reveals a consequence the first boundary excluded, at the point where changing the boundary is expensive.",
+   run:"Week 2 first contact, week 3 define, week 5 prototype, week 6 test one, week 8 test two, week 10 redefine and rebuild.",
+   prompt:"What did the outside contact put back inside your boundary?",
+   watch:"Teams will imagine the missing consequence instead of finding it. Require the contact log as a condition of submission."},
+  {id:"M5",n:"Design Charrette",f:"Project",do:"A short, time-boxed working session against requirement cards that reveal a trade-off across scale.",sub:"A trade-off log: which requirement broke against which consequence, and the boundary decision that caused it.",also:"Integrated Problem-solving",
+   conflict:"The requirement cards are incompatible once the boundary line is fixed, so every scheme must break one, and the decision is about which consequence is acceptable, not about technique.",
+   run:"30 minutes briefing, 60 minutes first attempt, 15 minutes cross-table challenge, 45 minutes resolution, 30 minutes presentation and defence.",
+   prompt:"State the consequence you are about to accept, in the terms of whoever bears it, before you accept it.",
+   watch:"Reward the scheme and you reward the fastest drafter. Mark the trade-off log."},
+  {id:"M6",n:"SULAM / Service Learning",f:"Experiential",do:"A real community system, with the partner defining the boundary and the problem.",sub:"Five journal entries written to set prompts, plus the partner feedback form.",also:"Self-awareness, Normative",
+   conflict:"The partner's boundary and a second, unconsulted account of the same system do not agree, and only one of them holds formal standing.",
+   run:"Week 2 problem definition with the partner, weeks 4 to 9 fieldwork, week 10 review with both accounts present, week 12 delivery.",
+   prompt:"Whose account of the system's boundary did you adopt, and whose did you set aside?",
+   watch:"Hours served is not evidence, and neither is gratitude. Mark the precision of the reflection, never its warmth."},
+  {id:"M7",n:"Living Lab",f:"Experiential",do:"A real, monitored change run on campus or in an operating system.",sub:"An account of what the monitoring showed: a loop, a delay, or a consequence the plan did not predict.",also:"Strategic, Integrated Problem-solving",
+   conflict:"The change cannot be assessed from the plan alone; only monitoring after the fact reveals whether a consequence appears outside the boundary the plan assumed.",
+   run:"Weeks 1 to 3 baseline, week 4 the change, weeks 5 to 10 live, week 11 monitoring, week 12 report including what the model got wrong.",
+   prompt:"What did the data show outside the boundary you changed, and after how long?",
+   watch:"Students design around the model, then report success. The monitoring record is what prevents this."},
+  {id:"M8",n:"Role-Play",f:"Simulation",do:"Take a role inside the system and decide under a boundary that conflicts with another role's.",sub:"A justification written afterwards: the boundary I defended, the consequence it hid, what I would draw differently.",also:"Normative",
+   conflict:"Every role card carries a boundary already drawn narrowly, set so a decision that is sound inside it is unsound once a wider boundary is admitted.",
+   run:"20 minutes preparation, 50 minutes in role, 20 minutes debrief conducted out of role.",
+   prompt:"Which boundary did your role's brief assume, and what did it hide?",
+   watch:"Performance skill is not competence. A confident speaker with a narrow boundary must not score highly. Mark the written justification."},
+  {id:"M9",n:"Negotiation / Mock Hearing",f:"Simulation",do:"Reach a published agreement on where a system's boundary or standard should sit, under deadline.",sub:"A concession log, plus a one-page account of the boundary finally agreed and what it excludes.",also:"Normative",
+   conflict:"Each party enters with a different boundary, and agreement is possible only once the parties settle whose boundary the standard is set against.",
+   run:"15 minutes briefing, 20 minutes separate preparation, 45 minutes negotiation, 10 minutes drafting, 20 minutes debrief.",
+   prompt:"Which boundary did the final decision adopt, and what does it now exclude?",
+   watch:"If one party's boundary wins outright with no concession, the briefs were set wrongly. Check that room for a genuine boundary compromise exists before running it."},
+  {id:"M10",n:"Structured Academic Controversy",f:"Dialogue",do:"Argue for one boundary, then argue for a different one, then seek a defensible joint position.",sub:"A statement: the strongest case for the boundary I did not start with, and what it would change.",also:"Normative, Critical Thinking",
+   conflict:"The switch is compulsory, and a pair may not switch until the opposing pair accepts its restatement of their boundary as accurate.",
+   run:"15 minutes preparation, 10 minutes each side presents, 10 minutes each side restates the other's case, 20 minutes with sides switched, 20 minutes roles dropped, 15 minutes writing.",
+   prompt:"What would the boundary you did not start with force you to include?",
+   watch:"The restatement step is where the competency lives, and it is the step cut when running late. Cut preparation instead. Never grade the boundary held."},
+  {id:"M11",n:"Deliberative Forum",f:"Dialogue",do:"A panel weighs competing system models or boundaries and must produce a minority report.",sub:"A statement: the boundary I entered with, the boundary I left with, and what remains uncertain.",also:"Normative",
+   conflict:"The briefing papers model the system at genuinely different boundaries, of equal quality, so the panel cannot settle it by finding the one correct boundary.",
+   run:"30 minutes reading, 40 minutes questioning witnesses, 40 minutes table discussion, 30 minutes drafting the recommendation, 20 minutes drafting the minority report.",
+   prompt:"Which boundary had no witness, and what would you have asked them?",
+   watch:"The minority report is the device that stops the panel rewarding conformity. Require at least one member per table to be able to sign it."}
+];
+
+</script>
+
+<script>
+/* ============ 14 DISCIPLINE CLUSTERS ============ */
+/* m = the situation for M1..M11 in this cluster.  r = rubric rows [judgedFrom, L1, L2, L3, L4] */
+var CLUSTERS = [
+{n:"Health, Medical and Life Sciences",
+ t:"Antimicrobial stewardship",
+ i:"Prescribing for the patient in front of you and the resistance that returns to the same ward months later form one loop; the boundary drawn around a single case hides it.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A patient-flow tool tested with ward staff reveals a bottleneck appearing in a department the first map excluded. A formulary hearing between clinicians, pharmacy and payer over where the cost-containment boundary should sit across the care pathway. A hand-hygiene compliance change is monitored across two wards, revealing a delayed effect on infection rates a month later.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated care-pathway map",
+ o:"the boundary chosen, and why future patients not yet in the ward was left out; the annotated map tracing prescribing behaviour and resistance; rising resistance on a different ward, named as the consequence appearing outside the boundary; the conclusion, and which prescribing rule would change resistance fastest.",
+ m:["A stewardship file split into patient records; the boundary chosen — single patient, ward, or hospital — changes the recommended protocol.",
+ "Four departments each hold one part of a hospital-acquired-infection chain; only combined does the transmission loop appear.",
+ "A clinic redesign across a semester, where a staffing boundary decision changes downstream wait times and readmission rates.",
+ "A patient-flow tool tested with ward staff reveals a bottleneck appearing in a department the first map excluded.",
+ "A hospital-unit layout session with infection-control, staffing and downstream-transfer cards that conflict once the unit boundary is fixed.",
+ "A community health-literacy engagement reveals a loop between clinic access and repeat admissions the original brief did not map.",
+ "A hand-hygiene compliance change is monitored across two wards, revealing a delayed effect on infection rates a month later.",
+ "A stewardship-committee role in which a narrow “this patient only” boundary produces a locally sound but system-unsound decision.",
+ "A formulary hearing between clinicians, pharmacy and payer over where the cost-containment boundary should sit across the care pathway.",
+ "A proposition on whether a ward-level or hospital-level boundary should govern an infection-control policy, argued both ways.",
+ "A panel on a screening programme's boundary — whether to model the clinic alone or the referral network it feeds."],
+ r:[["the boundary statement, part (a)","Lists patients, prescribers and the ward pharmacy with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding future patients not yet in the ward.","Justifies it, and shows how moving the boundary to include future patients not yet in the ward would change the conclusion."],
+    ["the annotated map, part (b)","Shows patients, prescribers and the ward pharmacy in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between prescribing behaviour and resistance, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the current patient file.","Names an effect on an element already inside the map.","Names rising resistance on a different ward, appearing outside the mapped elements.","Traces rising resistance on a different ward across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which prescribing rule would change resistance fastest."]]},
+
+{n:"Sciences",
+ t:"Fertiliser runoff",
+ i:"Nutrient applied to soil, carried to the river, taken up by algae and felt in fish stocks — a chain that becomes a loop once eutrophication changes what the next season's soil needs.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A public science output tested with residents reveals a downstream water use the original model excluded. A consent hearing between operator, regulator and residents over where the monitoring boundary should sit. A campus solvent-handling change is monitored, revealing a delayed effect on air quality in an adjacent building.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated catchment map",
+ o:"the boundary chosen, and why the estuary the river reach feeds was left out; the annotated map tracing nutrient load and algal growth; a fish-stock decline two reaches downstream, named as the consequence appearing outside the boundary; the conclusion, and which upstream input controls the algal bloom.",
+ m:["A contaminated-site dataset where the sampling boundary chosen determines whether the plume looks contained or spreading.",
+ "Four monitoring stations each hold one contaminant reading; only mapped together does the transport pathway appear.",
+ "A monitoring programme whose statistical boundary — which sites count — changes the reported extent of contamination.",
+ "A public science output tested with residents reveals a downstream water use the original model excluded.",
+ "A field-campaign session with safety, cost and catchment-boundary cards that conflict once sampling scope is fixed.",
+ "A community monitoring engagement reveals a loop between upstream discharge and downstream fish stocks not in the brief.",
+ "A campus solvent-handling change is monitored, revealing a delayed effect on air quality in an adjacent building.",
+ "A public-inquiry role in which a “this site only” boundary hides a regional groundwater connection.",
+ "A consent hearing between operator, regulator and residents over where the monitoring boundary should sit.",
+ "A proposition on precautionary boundary-setting versus managed-use boundary-setting for a contested chemical.",
+ "A panel on siting a facility, weighing a narrow site boundary against a catchment-wide one."],
+ r:[["the boundary statement, part (a)","Lists the farm, the river reach and the sampling station with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding the estuary the river reach feeds.","Justifies it, and shows how moving the boundary to include the estuary the river reach feeds would change the conclusion."],
+    ["the annotated map, part (b)","Shows the farm, the river reach and the sampling station in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between nutrient load and algal growth, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the sampled site.","Names an effect on an element already inside the map.","Names a fish-stock decline two reaches downstream, appearing outside the mapped elements.","Traces a fish-stock decline two reaches downstream across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which upstream input controls the algal bloom."]]},
+
+{n:"Engineering",
+ t:"Discharge standard selection",
+ i:"Catchment hydrology, treatment cost and downstream water quality sit on the same river; tightening the standard at the plant boundary changes what the next abstraction point upstream can rely on.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A design tested against a downstream user reveals an abstraction effect the original catchment boundary excluded. A client-panel negotiation over whether the standard is set at the plant boundary or the catchment boundary. A campus stormwater change is monitored, revealing an unanticipated effect two buildings downstream.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated treatment-train map",
+ o:"the boundary chosen, and why households abstracting further downstream was left out; the annotated map tracing treatment cost and discharge quality; a cost passed to a downstream treatment plant, named as the consequence appearing outside the boundary; the conclusion, and which treatment stage most cheaply protects the abstraction point.",
+ m:["A discharge-standard dataset where the catchment boundary chosen determines whether the standard looks achievable.",
+ "Four treatment-stage specialists each hold one process step; only combined does the loop between upstream load and downstream cost appear.",
+ "A treatment-train project across a semester, where the plant boundary changes the reported cost and the reported downstream water quality.",
+ "A design tested against a downstream user reveals an abstraction effect the original catchment boundary excluded.",
+ "A discharge-standard session with client-budget, regulator and downstream-user cards that conflict once the boundary is fixed.",
+ "A community water-quality engagement reveals a delay between an upstream change and a downstream effect the brief omitted.",
+ "A campus stormwater change is monitored, revealing an unanticipated effect two buildings downstream.",
+ "A client-panel role in which a “plant only” boundary hides a cost the operator's wider boundary would have shown.",
+ "A client-panel negotiation over whether the standard is set at the plant boundary or the catchment boundary.",
+ "A proposition on a plant-level versus a catchment-level system boundary for one discharge decision.",
+ "A panel on an infrastructure siting decision, weighing a local-impact boundary against a regional one."],
+ r:[["the boundary statement, part (a)","Lists the plant, the outfall and the nearest abstraction point with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding households abstracting further downstream.","Justifies it, and shows how moving the boundary to include households abstracting further downstream would change the conclusion."],
+    ["the annotated map, part (b)","Shows the plant, the outfall and the nearest abstraction point in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between treatment cost and discharge quality, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the plant boundary.","Names an effect on an element already inside the map.","Names a cost passed to a downstream treatment plant, appearing outside the mapped elements.","Traces a cost passed to a downstream treatment plant across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which treatment stage most cheaply protects the abstraction point."]]},
+
+{n:"Computer Science and Information Technology",
+ t:"Data-centre efficiency gain",
+ i:"An efficiency gain in one server hall shifts load, and sometimes emissions, to another part of the grid; the boundary drawn around the building hides the shift.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A tool tested with a user outside the original scope reveals a rebound effect the first boundary excluded. A vendor/client negotiation over where the system's data-privacy boundary is drawn. A campus network change is monitored, revealing a delayed load shift to a different department.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated network map",
+ o:"the boundary chosen, and why the department whose load absorbs the saving was left out; the annotated map tracing an efficiency gain and a load shift; a rebound in energy use elsewhere on the grid, named as the consequence appearing outside the boundary; the conclusion, and where the efficiency gain is actually captured, not just claimed.",
+ m:["A data-centre efficiency dataset where the system boundary — server room or grid — determines whether a gain looks like a saving or a shift.",
+ "Four microservices each hold one part of a load pattern; only combined does the cascading-failure loop appear.",
+ "A recommender-system project across a semester, where the training-data boundary decision changes which users the model systematically excludes.",
+ "A tool tested with a user outside the original scope reveals a rebound effect the first boundary excluded.",
+ "A systems-architecture session with latency, cost and scope cards that conflict once the service boundary is fixed.",
+ "A digital-inclusion engagement reveals a loop between app design and a community's data access the brief omitted.",
+ "A campus network change is monitored, revealing a delayed load shift to a different department.",
+ "An incident-response role in which a “this server only” boundary hides a dependency in another system.",
+ "A vendor/client negotiation over where the system's data-privacy boundary is drawn.",
+ "A proposition on whether an AI system's boundary should include or exclude its training-data supply chain.",
+ "A panel on an algorithmic-triage system, weighing a narrow accuracy boundary against a network-wide equity one."],
+ r:[["the boundary statement, part (a)","Lists the server hall, the cooling system and the grid connection with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding the department whose load absorbs the saving.","Justifies it, and shows how moving the boundary to include the department whose load absorbs the saving would change the conclusion."],
+    ["the annotated map, part (b)","Shows the server hall, the cooling system and the grid connection in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between an efficiency gain and a load shift, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the building.","Names an effect on an element already inside the map.","Names a rebound in energy use elsewhere on the grid, appearing outside the mapped elements.","Traces a rebound in energy use elsewhere on the grid across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies where the efficiency gain is actually captured, not just claimed."]]},
+
+{n:"Mathematics and Statistics",
+ t:"Indicator choice and aggregation",
+ i:"The statistic chosen to describe a population changes the policy built on it, and the policy changes the population the next survey measures — a loop between measurement and behaviour.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A public-facing statistic tested with a community group reveals a sensitivity the original model boundary excluded. An indicator-selection hearing over which variables sit inside versus outside the reporting boundary. A campus energy-use model is monitored against real data, revealing a delayed effect the model's boundary missed.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated model-boundary map",
+ o:"the boundary chosen, and why a variable the model treats as exogenous was left out; the annotated map tracing the published statistic and the behaviour it drives; a policy response the model's own data will later register, named as the consequence appearing outside the boundary; the conclusion, and which excluded variable would most change the ranking.",
+ m:["A resource-allocation dataset where the model boundary — which variables are exogenous — determines which policy looks optimal.",
+ "Four indicator specialists each hold one measure; only combined does the loop between measurement and behaviour appear.",
+ "A forecasting-model project across a semester, where the boundary on included variables changes the reported confidence interval.",
+ "A public-facing statistic tested with a community group reveals a sensitivity the original model boundary excluded.",
+ "A model-scoping session with data-availability, cost and boundary cards that conflict once the variable set is fixed.",
+ "A community data-literacy engagement reveals a loop between how a statistic is reported and how it is used, not modelled.",
+ "A campus energy-use model is monitored against real data, revealing a delayed effect the model's boundary missed.",
+ "A statistics-advisory role in which a narrow model boundary produces a technically correct but system-blind recommendation.",
+ "An indicator-selection hearing over which variables sit inside versus outside the reporting boundary.",
+ "A proposition on whether a model's boundary should include feedback from its own predictions.",
+ "A panel on a resource-allocation model, weighing a narrow optimisation boundary against a wider equity one."],
+ r:[["the boundary statement, part (a)","Lists the chosen variables, the excluded variables and the reporting unit with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding a variable the model treats as exogenous.","Justifies it, and shows how moving the boundary to include a variable the model treats as exogenous would change the conclusion."],
+    ["the annotated map, part (b)","Shows the chosen variables, the excluded variables and the reporting unit in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between the published statistic and the behaviour it drives, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the model's variable set.","Names an effect on an element already inside the map.","Names a policy response the model's own data will later register, appearing outside the mapped elements.","Traces a policy response the model's own data will later register across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which excluded variable would most change the ranking."]]},
+
+{n:"Education",
+ t:"Assessment-policy propagation",
+ i:"A change to one assessment policy propagates through teaching load, student behaviour and attainment; the classroom boundary hides where the effect actually lands.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A teaching intervention tested with a class outside the pilot reveals an effect the original scope excluded. A policy hearing over whether a funding-formula boundary is set at the school or the district level. A real assessment-policy change is monitored across a term, revealing a delayed effect on teaching behaviour.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated policy-propagation map",
+ o:"the boundary chosen, and why the cohort not sitting the assessment was left out; the annotated map tracing an assessment change and teaching behaviour; an enrolment shift in an unstreamed class, named as the consequence appearing outside the boundary; the conclusion, and which lever most controls the propagation.",
+ m:["A school dataset where the boundary — one classroom or the whole cohort — determines whether a policy's effect looks contained.",
+ "Four policy specialists each hold one lever (assessment, staffing, timetable, streaming); only combined does the propagation loop appear.",
+ "A curriculum-redesign project across a semester, where the boundary on who is affected changes the reported outcome.",
+ "A teaching intervention tested with a class outside the pilot reveals an effect the original scope excluded.",
+ "A timetable-redesign session with staffing, streaming and equity cards that conflict once the cohort boundary is fixed.",
+ "A community-education engagement reveals a loop between a school policy and a family's participation the brief omitted.",
+ "A real assessment-policy change is monitored across a term, revealing a delayed effect on teaching behaviour.",
+ "A policy-panel role in which a “this school only” boundary hides a district-wide enrolment effect.",
+ "A policy hearing over whether a funding-formula boundary is set at the school or the district level.",
+ "A proposition on whether a streaming policy's boundary should include its effect on unstreamed classes.",
+ "A panel on a medium-of-instruction policy, weighing a classroom boundary against a system-wide one."],
+ r:[["the boundary statement, part (a)","Lists the classroom, the timetable and the assessment policy with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding the cohort not sitting the assessment.","Justifies it, and shows how moving the boundary to include the cohort not sitting the assessment would change the conclusion."],
+    ["the annotated map, part (b)","Shows the classroom, the timetable and the assessment policy in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between an assessment change and teaching behaviour, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the single classroom.","Names an effect on an element already inside the map.","Names an enrolment shift in an unstreamed class, appearing outside the mapped elements.","Traces an enrolment shift in an unstreamed class across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which lever most controls the propagation."]]},
+
+{n:"Economics, Accounting, Business, Finance and Management",
+ t:"Packaging cost cut",
+ i:"A packaging saving in procurement raises returns in logistics and complaints in service — three departments joined by one material choice, each with a different boundary on the problem.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A pricing change tested with a customer segment outside the pilot reveals a demand effect the original boundary excluded. A multi-party negotiation over where a labour-standard boundary is drawn across a supply network. A real workplace policy change is monitored across a quarter, revealing a delayed effect on turnover.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated supply-chain map",
+ o:"the boundary chosen, and why the workforce at the supplying firm was left out; the annotated map tracing a packaging cost cut and a returns increase; a complaint volume rising in a different department, named as the consequence appearing outside the boundary; the conclusion, and which department actually bears the saving's cost.",
+ m:["A supply-chain dataset where the boundary — one supplier or the network — determines whether a cost saving looks real.",
+ "Four departments each hold one cost driver; only combined does the loop between a packaging cut and a returns increase appear.",
+ "A cost-reduction project across a semester, where the boundary on whose cost changes the reported saving.",
+ "A pricing change tested with a customer segment outside the pilot reveals a demand effect the original boundary excluded.",
+ "A supplier-selection session with margin, disclosure and boundary cards that conflict once the supply-chain scope is fixed.",
+ "A small-business engagement reveals a loop between a firm's cost decision and a supplying community's income the brief omitted.",
+ "A real workplace policy change is monitored across a quarter, revealing a delayed effect on turnover.",
+ "A procurement role in which a “this contract only” boundary hides an effect further down the supply chain.",
+ "A multi-party negotiation over where a labour-standard boundary is drawn across a supply network.",
+ "A proposition on whether a firm's carbon-accounting boundary should include its suppliers' emissions.",
+ "A panel on a business strategy, weighing a firm-level boundary against a market-wide one."],
+ r:[["the boundary statement, part (a)","Lists procurement, logistics and customer service with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding the workforce at the supplying firm.","Justifies it, and shows how moving the boundary to include the workforce at the supplying firm would change the conclusion."],
+    ["the annotated map, part (b)","Shows procurement, logistics and customer service in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between a packaging cost cut and a returns increase, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the purchasing contract.","Names an effect on an element already inside the map.","Names a complaint volume rising in a different department, appearing outside the mapped elements.","Traces a complaint volume rising in a different department across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which department actually bears the saving's cost."]]},
+
+{n:"Language, Literature and Communication",
+ t:"Media frame propagation",
+ i:"One outlet's framing is picked up, amplified and returned to policy; the loop closes faster than any single-outlet boundary can see.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A public message tested with an audience outside the target group reveals a misreading the original scope excluded. A crisis-communication negotiation over where the disclosure boundary sits across agency, community and media. A real campus communication change is monitored, revealing a delayed effect on a group the message did not target.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated media-propagation map",
+ o:"the boundary chosen, and why an outlet that will re-use the frame was left out; the annotated map tracing a media frame and the policy it shapes; the frame reappearing in a policy debate weeks later, named as the consequence appearing outside the boundary; the conclusion, and which outlet's uptake would most change the frame's reach.",
+ m:["A media dataset where the boundary — one outlet or the media ecosystem — determines whether a frame looks isolated or spreading.",
+ "Four outlets each hold one version of a story; only combined does the frame-amplification loop appear.",
+ "A communication-strategy project across a semester, where the audience boundary changes the reported reach and the reported harm.",
+ "A public message tested with an audience outside the target group reveals a misreading the original scope excluded.",
+ "A crisis-communication session with audience, channel and accuracy cards that conflict once the message boundary is fixed.",
+ "A community-literacy engagement reveals a loop between how a message is worded and how it is repeated, not intended.",
+ "A real campus communication change is monitored, revealing a delayed effect on a group the message did not target.",
+ "A press-conference role in which a “this statement only” boundary hides how it will be re-framed elsewhere.",
+ "A crisis-communication negotiation over where the disclosure boundary sits across agency, community and media.",
+ "A proposition on whether a campaign's boundary should include how opponents will re-use its message.",
+ "A panel on a public-information campaign, weighing a single-channel boundary against a cross-platform one."],
+ r:[["the boundary statement, part (a)","Lists the originating outlet, the audience and the policy response with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding an outlet that will re-use the frame.","Justifies it, and shows how moving the boundary to include an outlet that will re-use the frame would change the conclusion."],
+    ["the annotated map, part (b)","Shows the originating outlet, the audience and the policy response in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between a media frame and the policy it shapes, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the originating outlet.","Names an effect on an element already inside the map.","Names the frame reappearing in a policy debate weeks later, appearing outside the mapped elements.","Traces the frame reappearing in a policy debate weeks later across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which outlet's uptake would most change the frame's reach."]]},
+
+{n:"Sociology, Psychology and Human Development",
+ t:"School zoning and enrolment",
+ i:"A zoning decision shifts housing prices, which shifts which families can afford to move, which shifts enrolment two years later — a loop that crosses from planning into education.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"An intervention tested with a household outside the pilot reveals an effect the original boundary excluded. A community-intervention hearing over whether the boundary is the household, the street, or the district. A real neighbourhood programme is monitored across a year, revealing a delayed effect on a different age group.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated zoning map",
+ o:"the boundary chosen, and why a family priced out of the catchment was left out; the annotated map tracing housing price and enrolment; an enrolment shift appearing two years after the zoning change, named as the consequence appearing outside the boundary; the conclusion, and which zoning parameter most controls the enrolment shift.",
+ m:["A community dataset where the boundary — one neighbourhood or the city — determines whether a policy's effect looks contained.",
+ "Four service providers each hold one part of a family's case; only combined does the referral loop appear.",
+ "A community-intervention project across a semester, where the boundary on who counts as affected changes the reported outcome.",
+ "An intervention tested with a household outside the pilot reveals an effect the original boundary excluded.",
+ "A service-design session with funding, need and boundary cards that conflict once the catchment is fixed.",
+ "A community-intervention engagement reveals a loop between a service's design and a resident's take-up the brief omitted.",
+ "A real neighbourhood programme is monitored across a year, revealing a delayed effect on a different age group.",
+ "A case-conference role in which a “this family only” boundary hides a neighbourhood-level pattern.",
+ "A community-intervention hearing over whether the boundary is the household, the street, or the district.",
+ "A proposition on whether a wellbeing model's boundary should include a family's wider social network.",
+ "A panel on an ageing-population policy, weighing a household boundary against a community-wide one."],
+ r:[["the boundary statement, part (a)","Lists the zoning rule, the housing market and the school catchment with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding a family priced out of the catchment.","Justifies it, and shows how moving the boundary to include a family priced out of the catchment would change the conclusion."],
+    ["the annotated map, part (b)","Shows the zoning rule, the housing market and the school catchment in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between housing price and enrolment, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the current catchment line.","Names an effect on an element already inside the map.","Names an enrolment shift appearing two years after the zoning change, appearing outside the mapped elements.","Traces an enrolment shift appearing two years after the zoning change across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which zoning parameter most controls the enrolment shift."]]},
+
+{n:"Architecture, Design, Built Environment and Construction",
+ t:"Building material life-cycle",
+ i:"A material's impact is dominated by one life-cycle stage, not necessarily the one visible on site; the site boundary hides the stage that matters most.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A scheme tested with an occupant outside the client brief reveals a consequence the original site boundary excluded. A design-panel negotiation over whether the boundary is the plot, the block, or the precinct. A real campus retrofit is monitored, revealing a delayed effect on a neighbouring building's energy use.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated life-cycle map",
+ o:"the boundary chosen, and why the demolition or disposal stage was left out; the annotated map tracing a material choice and its dominant impact stage; an emissions consequence appearing off-site, at extraction, named as the consequence appearing outside the boundary; the conclusion, and which life-cycle stage actually dominates the impact.",
+ m:["A building dataset where the life-cycle boundary — construction only or full life-cycle — determines which material looks sustainable.",
+ "Four building-system specialists (structure, services, envelope, site) each hold one part; only combined does the thermal loop appear.",
+ "A design project across a semester, where the site boundary changes the reported off-site consequence.",
+ "A scheme tested with an occupant outside the client brief reveals a consequence the original site boundary excluded.",
+ "A design session with density, heritage and boundary cards that conflict once the site line is fixed.",
+ "A community-design engagement reveals a loop between a scheme's density and a neighbourhood's traffic the brief omitted.",
+ "A real campus retrofit is monitored, revealing a delayed effect on a neighbouring building's energy use.",
+ "A design-review role in which a “this plot only” boundary hides a streetscape-level consequence.",
+ "A design-panel negotiation over whether the boundary is the plot, the block, or the precinct.",
+ "A proposition on whether a building's carbon boundary should include its embodied material supply chain.",
+ "A panel on an urban redevelopment, weighing a site boundary against a precinct-wide one."],
+ r:[["the boundary statement, part (a)","Lists extraction, construction and in-use energy with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding the demolition or disposal stage.","Justifies it, and shows how moving the boundary to include the demolition or disposal stage would change the conclusion."],
+    ["the annotated map, part (b)","Shows extraction, construction and in-use energy in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between a material choice and its dominant impact stage, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the construction stage alone.","Names an effect on an element already inside the map.","Names an emissions consequence appearing off-site, at extraction, appearing outside the mapped elements.","Traces an emissions consequence appearing off-site, at extraction across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which life-cycle stage actually dominates the impact."]]},
+
+{n:"Agriculture, Forestry, Aquaculture, Veterinary, Environmental and Food Sciences",
+ t:"Crop choice and catchment health",
+ i:"A crop choice changes soil health and water demand on one farm, and food security in the catchment it sits inside — a loop the farm boundary alone cannot show.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A land-use plan tested with a downstream user reveals a water-quality effect the original farm boundary excluded. A land or water-concession hearing over whether the boundary is the farm, the catchment, or the region. A real farm-trial plot is monitored across a season, revealing a delayed effect on a neighbouring plot's soil.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated farm-catchment map",
+ o:"the boundary chosen, and why a downstream water user outside the farm boundary was left out; the annotated map tracing crop choice and soil health; a water-demand consequence appearing in the catchment, not the farm, named as the consequence appearing outside the boundary; the conclusion, and which crop decision most changes catchment-wide water demand.",
+ m:["A land-use dataset where the boundary — one farm or the catchment — determines whether a crop choice looks sustainable.",
+ "Four specialists (soil, water, pest, market) each hold one part; only combined does the loop between crop choice and soil health appear.",
+ "A land-use project across a semester, where the farm boundary changes the reported water-demand consequence.",
+ "A land-use plan tested with a downstream user reveals a water-quality effect the original farm boundary excluded.",
+ "A land-use session with yield, welfare and boundary cards that conflict once the property line is fixed.",
+ "A cooperative engagement reveals a loop between a processing decision and a smallholder's income the brief omitted.",
+ "A real farm-trial plot is monitored across a season, revealing a delayed effect on a neighbouring plot's soil.",
+ "A land-concession role in which a “this plot only” boundary hides a catchment-wide biodiversity effect.",
+ "A land or water-concession hearing over whether the boundary is the farm, the catchment, or the region.",
+ "A proposition on whether a food system's boundary should include its downstream waste stream.",
+ "A panel on a land-use strategy, weighing a farm-level boundary against a catchment-wide one."],
+ r:[["the boundary statement, part (a)","Lists the crop, the soil and the irrigation source with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding a downstream water user outside the farm boundary.","Justifies it, and shows how moving the boundary to include a downstream water user outside the farm boundary would change the conclusion."],
+    ["the annotated map, part (b)","Shows the crop, the soil and the irrigation source in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between crop choice and soil health, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the farm boundary.","Names an effect on an element already inside the map.","Names a water-demand consequence appearing in the catchment, not the farm, appearing outside the mapped elements.","Traces a water-demand consequence appearing in the catchment, not the farm across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which crop decision most changes catchment-wide water demand."]]},
+
+{n:"Law",
+ t:"Land tenure and environmental liability",
+ i:"Strengthening one party's statutory protection on one parcel changes investment and enforcement behaviour on the parcels around it — a consequence the parcel boundary hides.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A draft regulation tested with a party outside the original scope reveals a liability effect the boundary excluded. A moot or settlement conference over whether the legal boundary is the parcel, the catchment, or the jurisdiction. A real land-registration change is monitored, revealing a delayed effect on a neighbouring tenure dispute.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated tenure map",
+ o:"the boundary chosen, and why a customary claimant with no registered title was left out; the annotated map tracing a statutory protection and enforcement behaviour; an enforcement pattern shifting to a neighbouring parcel, named as the consequence appearing outside the boundary; the conclusion, and which statutory boundary would most change enforcement.",
+ m:["A land-tenure file where the boundary — one parcel or the catchment — determines whether a liability claim looks contained.",
+ "Four legal specialists (title, environmental, customary, contract) each hold one part; only combined does the liability loop appear.",
+ "A regulatory-drafting project across a semester, where the statutory boundary changes which party bears a downstream cost.",
+ "A draft regulation tested with a party outside the original scope reveals a liability effect the boundary excluded.",
+ "A settlement-drafting session with title, liability and boundary cards that conflict once the parcel line is fixed.",
+ "A community-legal engagement reveals a loop between a customary claim and an enforcement pattern the brief omitted.",
+ "A real land-registration change is monitored, revealing a delayed effect on a neighbouring tenure dispute.",
+ "A settlement-conference role in which a “this parcel only” boundary hides a catchment-wide enforcement effect.",
+ "A moot or settlement conference over whether the legal boundary is the parcel, the catchment, or the jurisdiction.",
+ "A proposition on whether an environmental-liability boundary should include a defendant's supply chain.",
+ "A panel on a land-tenure reform, weighing a parcel-level boundary against a regional one."],
+ r:[["the boundary statement, part (a)","Lists the parcel, the title register and the adjoining claim with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding a customary claimant with no registered title.","Justifies it, and shows how moving the boundary to include a customary claimant with no registered title would change the conclusion."],
+    ["the annotated map, part (b)","Shows the parcel, the title register and the adjoining claim in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between a statutory protection and enforcement behaviour, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the registered parcel.","Names an effect on an element already inside the map.","Names an enforcement pattern shifting to a neighbouring parcel, appearing outside the mapped elements.","Traces an enforcement pattern shifting to a neighbouring parcel across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which statutory boundary would most change enforcement."]]},
+
+{n:"Arts and Humanities",
+ t:"Heritage interpretation and display",
+ i:"A label's wording changes visitor attention, which changes funding priority, which changes what is acquired and displayed next — a loop between interpretation and institutional resourcing.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A draft label tested with a source-community reader reveals a consequence the original interpretive boundary excluded. A curatorial-review negotiation over whether the interpretive boundary is the object, the collection, or the community's history. A real exhibition change is monitored, revealing a delayed effect on visitor interpretation.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated provenance map",
+ o:"the boundary chosen, and why the source community's own account was left out; the annotated map tracing an institution's label and a community's account; a funding or acquisition decision shaped by the label, named as the consequence appearing outside the boundary; the conclusion, and which part of the provenance record most changes the narrative.",
+ m:["A curatorial dataset where the boundary — one object or the collection's provenance network — determines whether a narrative looks complete.",
+ "Four archival specialists each hold one part of an object's history; only combined does the provenance loop appear.",
+ "A curatorial project across a semester, where the interpretive boundary changes which community's account is foregrounded.",
+ "A draft label tested with a source-community reader reveals a consequence the original interpretive boundary excluded.",
+ "A curatorial session with narrative, ownership and boundary cards that conflict once the display scope is fixed.",
+ "A community-consultation engagement reveals a loop between an institution's label and a community's own account the brief omitted.",
+ "A real exhibition change is monitored, revealing a delayed effect on visitor interpretation.",
+ "A curatorial-review role in which a “this object only” boundary hides a wider collection-level consequence.",
+ "A curatorial-review negotiation over whether the interpretive boundary is the object, the collection, or the community's history.",
+ "A proposition on whether an institution's interpretive boundary should include its own acquisition history.",
+ "A panel on a heritage-interpretation policy, weighing a single-object boundary against a collection-wide one."],
+ r:[["the boundary statement, part (a)","Lists the object, the catalogue record and the source community with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding the source community's own account.","Justifies it, and shows how moving the boundary to include the source community's own account would change the conclusion."],
+    ["the annotated map, part (b)","Shows the object, the catalogue record and the source community in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between an institution's label and a community's account, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the single displayed object.","Names an effect on an element already inside the map.","Names a funding or acquisition decision shaped by the label, appearing outside the mapped elements.","Traces a funding or acquisition decision shaped by the label across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which part of the provenance record most changes the narrative."]]},
+
+{n:"Hospitality, Tourism, Sport, Recreation and Services",
+ t:"Destination carrying capacity",
+ i:"Visitor throughput funds the site, but past a threshold it degrades the quality that attracted visitors in the first place — a loop that closes on the same site over a longer time-scale than one season.",
+ p:"M4 Design Thinking; M9 Negotiation / Mock Hearing; M7 Living Lab",
+ a:"A destination plan tested with a resident outside the operator brief reveals a consequence the original boundary excluded. A stakeholder-forum negotiation over whether the carrying-capacity boundary is the site, the town, or the season. A real event-management change is monitored, revealing a delayed effect on a neighbouring business.",
+ am:"Boundary-revision cycle with a contact log, plus an individual justification memo",
+ s:"Annotated carrying-capacity map",
+ o:"the boundary chosen, and why the seasonal workforce the venue depends on was left out; the annotated map tracing visitor throughput and site quality; a quality decline felt a season after the throughput peak, named as the consequence appearing outside the boundary; the conclusion, and which capacity limit most protects the asset that attracts visitors.",
+ m:["A destination dataset where the boundary — one site or the region — determines whether visitor growth looks sustainable.",
+ "Four operators each hold one part of a visitor's journey; only combined does the carrying-capacity loop appear.",
+ "A destination-development project across a semester, where the site boundary changes the reported consequence for residents.",
+ "A destination plan tested with a resident outside the operator brief reveals a consequence the original boundary excluded.",
+ "A destination-planning session with throughput, liveability and boundary cards that conflict once the site line is fixed.",
+ "A community-tourism engagement reveals a loop between visitor throughput and a resident's quality of life the brief omitted.",
+ "A real event-management change is monitored, revealing a delayed effect on a neighbouring business.",
+ "A stakeholder-forum role in which a “this venue only” boundary hides a town-wide seasonal effect.",
+ "A stakeholder-forum negotiation over whether the carrying-capacity boundary is the site, the town, or the season.",
+ "A proposition on whether a destination's boundary should include the seasonal workforce it depends on.",
+ "A panel on a tourism strategy, weighing a site-level boundary against a region-wide one."],
+ r:[["the boundary statement, part (a)","Lists the venue, the operator and the resident population with no boundary drawn.","Names the boundary but does not justify what was left out.","States the boundary and justifies excluding the seasonal workforce the venue depends on.","Justifies it, and shows how moving the boundary to include the seasonal workforce the venue depends on would change the conclusion."],
+    ["the annotated map, part (b)","Shows the venue, the operator and the resident population in isolation, with no links drawn.","Draws one link, but only as a single cause and effect.","Traces a feedback loop between visitor throughput and site quality, not just a chain.","Traces the loop and explains the delay or non-linear effect within it."],
+    ["the consequence noted outside the map, part (c)","Treats the system as having no effect beyond the single venue.","Names an effect on an element already inside the map.","Names a quality decline felt a season after the throughput peak, appearing outside the mapped elements.","Traces a quality decline felt a season after the throughput peak across scale or time, and states what remains uncertain."],
+    ["the closing interpretation, part (d)","Presents the map with no reading of it.","Restates the map in words without drawing a conclusion.","Draws one defensible conclusion the map supports.","Draws the conclusion and identifies which capacity limit most protects the asset that attracts visitors."]]}
+];
+</script>
+
+<script>
+/* ============ STATE ============ */
+var SECTIONS = [
+  {g:"Understand"},
+  {id:"start",  ref:"00", nav:"Start here"},
+  {id:"meaning",ref:"01", nav:"What it means"},
+  {id:"criteria",ref:"02",nav:"The four criteria"},
+  {g:"Your course"},
+  {id:"field",  ref:"03", nav:"Your discipline"},
+  {id:"methods",ref:"04", nav:"Choose a method"},
+  {id:"design", ref:"05", nav:"Design it, test it"},
+  {g:"Assess"},
+  {id:"brief",  ref:"06", nav:"The assignment"},
+  {id:"rubric", ref:"07", nav:"The rubric"},
+  {id:"audit",  ref:"08", nav:"Align and audit"},
+  {g:"Practise"},
+  {id:"checks", ref:"09", nav:"Self-checks"},
+  {id:"plan",   ref:"10", nav:"My plan"}
+];
+var IDS = SECTIONS.filter(function(s){return s.id}).map(function(s){return s.id});
+var store = {
+  get:function(k,d){ try{ var v=localStorage.getItem("esdst_"+k); return v===null?d:JSON.parse(v); }catch(e){ return d; } },
+  set:function(k,v){ try{ localStorage.setItem("esdst_"+k,JSON.stringify(v)); }catch(e){} }
+};
+var ci = store.get("cluster",0);
+if(typeof ci!=="number" || ci<0 || ci>13) ci=0;
+var seen = store.get("seen",[]);
+if(!Array.isArray(seen)) seen=[];
+var current = "start";
+function C(){ return CLUSTERS[ci]; }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+/* ============ SECTION BUILDERS ============ */
+function head(ref,eyebrow,title,lede){
+  return '<div class="eyebrow">'+ref+' &middot; '+eyebrow+'</div><h2 class="title">'+title+'</h2><p class="lede">'+lede+'</p>';
+}
+
+function sec_start(){
+  return head("Section 0","Start here","How to teach and assess Systems Thinking in your own course",
+   "Work through the tabs in order. You will finish with one activity, one assignment and one rubric that are ready to use.")
+  +'<div class="stack">'
+  +'<div class="panel p-rule"><span class="tag">The one rule</span><p>If a student could score full marks <strong>without using the competency</strong>, you have not assessed it. Every check on this site is a way of applying that rule earlier.</p></div>'
+  +'</div>'
+  +'<h3>What you will be able to do</h3>'
+  +'<p class="body">The module has five learning outcomes. Each one is tied to a specific piece of work you will have produced by the end, recorded in <strong>My plan</strong>.</p>'
+  +'<div class="tablewrap"><table><thead><tr><th>Outcome</th><th>On completion you can</th><th>Where</th></tr></thead><tbody>'
+  +'<tr><td class="k"><span class="mlcode">ML01</span></td><td>Distinguish Systems Thinking from listing factors, domain knowledge and diagram-drawing.</td><td><button class="btn sm" data-goto="meaning">What it means &rarr;</button></td></tr>'
+  +'<tr><td class="k"><span class="mlcode">ML02</span></td><td>Select and adapt a teaching method that develops Systems Thinking in your own course.</td><td><button class="btn sm" data-goto="methods">Choose a method &rarr;</button></td></tr>'
+  +'<tr><td class="k"><span class="mlcode">ML03</span></td><td>Design an assignment that produces an individual, annotated system map with interpretation.</td><td><button class="btn sm" data-goto="brief">The assignment &rarr;</button></td></tr>'
+  +'<tr><td class="k"><span class="mlcode">ML04</span></td><td>Build the four-criterion rubric and adapt its descriptors to your discipline.</td><td><button class="btn sm" data-goto="rubric">The rubric &rarr;</button></td></tr>'
+  +'<tr><td class="k"><span class="mlcode">ML05</span></td><td>Audit your own design against the ways an alignment claim fails.</td><td><button class="btn sm" data-goto="audit">Align and audit &rarr;</button></td></tr>'
+  +'</tbody></table></div>'
+  +'<div class="stack"><div class="panel p-step"><span class="tag">How the outcomes are evidenced</span><p>ML01 by the self-checks; ML02 to ML05 by the five worksheet sections of <strong>My plan</strong>. A completed plan is the record that you worked through the module.</p></div></div>'
+  +'<h3>What is already decided for you</h3>'
+  +'<div class="fixedrow">'
+  +'<div><b>Your course</b><span>One you teach now</span></div>'
+  +'<div><b>The primary SDG</b><span>Already selected</span></div>'
+  +'<div><b>The competency</b><span>Systems Thinking</span></div>'
+  +'<div><b>The CLO</b><span>Already mapped to PLO12</span></div>'
+  +'</div>'
+  +'<div class="stack"><div class="panel p-step"><span class="tag">What you decide</span><p>The teaching activity, the assignment, and the rubric descriptors adapted to your discipline. That is all this site asks of you.</p></div></div>'
+  +'<h3>A list is not a system</h3>'
+  +'<div class="grid g2">'
+  +'<div class="card"><span class="n">A list</span><h5>Names factors, with nothing joining them</h5><p>Eight bullet points on what affects a coral reef is a list, however thorough. Nothing in it shows how the factors act on each other.</p></div>'
+  +'<div class="card accent"><span class="n">A system</span><h5>Has a stated boundary and a traced loop</h5><p>The student must decide what is inside and what is outside, trace how a change travels through it, and name a consequence that turns up somewhere they did not start looking.</p></div>'
+  +'</div>'
+  +'<div class="stack"><div class="panel p-warn"><span class="tag">The question an examiner asks</span><p>Not <em>did your students draw a diagram</em>. They ask: <strong>which document shows a student justifying why one thing was left outside the boundary?</strong></p></div></div>'
+  +'<h3>How to use this site</h3>'
+  +'<div class="stack tight">'
+  +'<div class="panel"><p><strong>1 &middot; Pick your discipline cluster</strong> in the sidebar to customise the module to your cluster.</p></div>'
+  +'<div class="panel"><p><strong>2 &middot; Work down the sidebar in order.</strong> Understand the competency, choose a method, write the brief, adapt the rubric, audit the result.</p></div>'
+  +'<div class="panel"><p><strong>3 &middot; Fill in <em>My plan</em> as you go.</strong> It saves in this browser and can be copied into your course file at the end.</p></div>'
+  +'</div>';
+}
+
+function sec_meaning(){
+  var abil=[
+   ["Recognise and understand relationships","A relationship must be drawn between named elements, not just the elements listed."],
+   ["Analyse complex systems","Decide what is inside the system and what is outside, and hold several interacting parts at once."],
+   ["Think of how systems are embedded within different domains and scales","Trace a consequence that appears in a different place, time or level than the cause."],
+   ["Deal with uncertainty","State what the map does not know, and what would change the conclusion."]];
+  var conf=[
+   ["...is listing factors","A list of causes is not a system; nothing in it shows how the parts act on each other.","Did you draw a relationship, or just add another box?"],
+   ["...is knowing a lot about the topic","Content knowledge and systemic reasoning are different skills; an expert can still describe a system as a list.","Could someone who knew half as many facts, but saw the right connections, outscore this?"],
+   ["...is drawing a complicated diagram","Visual complexity is not systemic insight. A busy diagram with no loop is still a list with arrows.","Does the diagram show a loop, a delay, or an effect at a different scale, or just more boxes?"],
+   ["...is Integrated Problem-solving","Integrated Problem-solving decides what to do; Systems Thinking analyses how the parts interact. Mapping is not deciding.","Did the task ask the student to recommend an action, or to explain a structure?"]];
+  var h = head("Section 2","Understanding the competency","What Systems Thinking means",
+    "Four abilities in the source definition, four confusions that appear in real course files, and one constraint that rules out half the methods you might have used.");
+  h+='<div class="stack"><div class="panel p-def"><span class="tag">Definition &middot; UNESCO (2017)</span><em>Systems thinking competency: the abilities to recognise and understand relationships; to analyse complex systems; to think of how systems are embedded within different domains and different scales; and to deal with uncertainty.</em></div></div>';
+  h+='<h3>The four abilities, and what each demands of student work</h3><div class="grid g2">';
+  abil.forEach(function(a,i){ h+='<div class="card"><span class="n">Ability '+(i+1)+'</span><h5>'+a[0]+'</h5><p>'+a[1]+'</p></div>'; });
+  h+='</div>';
+  h+='<h3>What Systems Thinking is not</h3><div class="tablewrap"><table><thead><tr><th>Confusion</th><th>Why it fails</th><th>Ask instead</th></tr></thead><tbody>';
+  conf.forEach(function(c){ h+='<tr><td class="k wrap">Systems Thinking '+c[0]+'</td><td>'+c[1]+'</td><td>'+c[2]+'</td></tr>'; });
+  h+='</tbody></table></div>';
+  h+='<h3>Which evidence can carry it</h3>';
+  h+='<div class="fixedrow" style="grid-template-columns:repeat(3,minmax(0,1fr))">'
+   +'<div style="border-top-color:var(--teal);background:var(--teal-tint)"><b>Cognitive</b><span>All four abilities &middot; main role</span></div>'
+   +'<div><b>Socio-emotional</b><span>Tolerating an unresolved loop &middot; minor role</span></div>'
+   +'<div><b>Behavioural</b><span>Acting on a stated leverage point &middot; minor role</span></div></div>';
+  h+='<div class="stack"><div class="panel"><p>Because Systems Thinking is mainly cognitive, the evidence must have two parts: <strong>an explicit boundary and diagram</strong>, and <strong>an individual written interpretation</strong> of what the diagram shows.</p></div>'
+   +'<div class="panel p-warn"><span class="tag">Cannot provide sufficient evidence</span><p>A written exam question defining systems thinking, a multiple-choice test on system components, an essay describing a system with no diagram, a list of factors with no drawn relationship. However the question is phrased, these produce knowledge evidence and no rubric repairs that.</p></div></div>';
+  return h;
+}
+
+function sec_criteria(){
+  var h = head("Section 2.5","The rubric criteria","The four criteria",
+    "The four abilities condense into three observable behaviours, and each becomes one rubric criterion. A fourth is added for what the student does with the analysis.");
+  h+='<h3>The four criteria, one by one</h3>';
+  h+='<div class="grid g2">';
+  CRIT.forEach(function(c,i){ h+='<div class="card accent"><span class="n">Criterion '+(i+1)+'</span><h5>'+c.n+'</h5><p>'+c.q+'</p><p style="color:var(--ink-2);font-size:12.5px">'+c.from+'</p></div>'; });
+  h+='</div>';
+  h+='<div class="stack"><div class="panel p-note"><span class="tag">Numbering</span><p>Where Systems Thinking is the <strong>first</strong> competency in a course these are criteria 1 to 4. Where it is the <strong>second</strong>, they are numbered 5 to 8 in the alignment table. Always name the criterion as well as numbering it.</p></div></div>';
+  h+='<h3>The fixed rubric</h3><p class="body">This wording is the starting point for every discipline. The four criteria, their names and the four level names never change. Only the descriptors are rewritten &mdash; see <strong>The rubric</strong>.</p>';
+  h+='<div class="tablewrap"><table class="levels"><thead><tr><th>Criterion</th>';
+  LEVELS.forEach(function(l){ h+='<th>'+l+'</th>'; });
+  h+='</tr></thead><tbody>';
+  CRIT.forEach(function(c,i){
+    h+='<tr><td class="k wrap"><span class="crit-n">'+(i+1)+'</span><br>'+c.n+'</td>';
+    GENERIC[i].forEach(function(d){ h+='<td>'+d+'</td>'; });
+    h+='</tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="stack"><div class="panel p-rule"><span class="tag">Fixed</span><p>Four criteria and their names. Four levels: Limited, Developing, Proficient, Exemplary. Do not add a fifth criterion, drop one, or rename a level.</p></div></div>';
+  return h;
+}
+
+function sec_field(){
+  var c=C();
+  var h = head("Section 2.4 &amp; 3.4","Your discipline","Systems Thinking in "+esc(c.n),
+    "Systems Thinking cannot be practised on a topic that is genuinely a simple list. Your course already contains a situation where elements interact, a change travels, and a consequence turns up somewhere you did not start looking.");
+  h+='<div class="stack">'
+   +'<div class="panel"><span class="tag" style="color:var(--ink-3)">Topic already taught</span><p style="font-size:17px;color:var(--ink);font-family:var(--serif)">'+esc(c.t)+'</p></div>'
+   +'<div class="panel p-warn"><span class="tag">The system in play</span><p>'+esc(c.i)+'</p></div></div>';
+  h+='<h3>Three questions to find your own system</h3>'
+   +'<div class="stack tight">'
+   +'<div class="panel p-step"><p><strong>1</strong> &nbsp;Name one topic you already teach.</p></div>'
+   +'<div class="panel p-step"><p><strong>2</strong> &nbsp;List the elements involved. Do any two act on each other, not just sit beside each other?</p></div>'
+   +'<div class="panel p-step"><p><strong>3</strong> &nbsp;Is there a plausible loop, delay, or an effect appearing outside the elements you would first list? State it in one sentence.</p></div>'
+   +'<div class="panel p-note"><p>If question 3 fails, the topic is a list. Choose another week.</p></div></div>';
+  h+='<h3>The worked design for this cluster</h3>'
+   +'<div class="tablewrap"><table><tbody>'
+   +'<tr><td class="k">Pedagogy</td><td>'+esc(c.p)+'</td></tr>'
+   +'<tr><td class="k">Learning activities</td><td>'+esc(c.a)+'</td></tr>'
+   +'<tr><td class="k">Assessment method</td><td>'+esc(c.am)+'</td></tr>'
+   +'<tr><td class="k">Individual submission</td><td><strong>'+esc(c.s)+'</strong></td></tr>'
+   +'</tbody></table></div>';
+  h+='<h3>What that submission must contain</h3>'
+   +'<div class="stack"><div class="panel p-step"><span class="tag">In criterion order 1, 2, 3, 4</span><p>'+esc(c.o)+'</p></div></div>';
+  return h;
+}
+
+function sec_methods(){
+  var c=C();
+  var h = head("Section 3","Pedagogy","Choose a method",
+    "Eleven methods, each written for your cluster. All eleven are a strong fit for Systems Thinking; that is why they are in the bank.");
+  h+='<div class="stack"><div class="panel p-rule"><span class="tag">Three rules for any activity</span><ul>'
+   +'<li><strong>Build the boundary decision in.</strong> If the boundary is given to students, or is the only sensible one, deciding it develops nothing.</li>'
+   +'<li><strong>Run it twice.</strong> Give students a practice map, then focused feedback, then a later assessed map on a different scenario.</li>'
+   +'<li><strong>Leave an individual trace.</strong> Something each student personally drew, wrote or annotated must survive the activity. Decide what it is before you run it.</li>'
+   +'</ul></div></div>';
+  h+='<h3>The method bank<span class="chip">'+esc(c.n)+'</span></h3>';
+  var fams=["All","Inquiry","Project","Experiential","Simulation","Dialogue"];
+  h+='<div class="filters" role="group" aria-label="Filter by method family">';
+  fams.forEach(function(f){ h+='<button class="btn sm fam-f" data-fam="'+f+'" aria-pressed="'+(f==="All")+'">'+f+'</button>'; });
+  h+='</div><div class="stack" id="methodlist" style="margin-top:12px">';
+  METHODS.forEach(function(m,i){
+    h+='<div class="method" data-fam="'+m.f+'">'
+     +'<button type="button" aria-expanded="false"><span class="mid">'+m.id+'</span><span class="mname">'+m.n+'</span><span class="fam">'+m.f+'</span><span class="chev">+</span></button>'
+     +'<div class="spec"><dl>'
+     +'<dt>In your cluster</dt><dd><strong>'+esc(c.m[i])+'</strong></dd>'
+     +'<dt>The boundary decision built in</dt><dd>'+m.conflict+'</dd>'
+     +'<dt>Run and timing</dt><dd>'+m.run+'</dd>'
+     +'<dt>Required prompt</dt><dd>'+m.prompt+'</dd>'
+     +'<dt>Individual evidence</dt><dd>'+m.sub+'</dd>'
+     +'<dt>Watch out</dt><dd style="color:var(--rose)">'+m.watch+'</dd>'
+     +'<dt>Also develops</dt><dd>'+m.also+'</dd>'
+     +'</dl></div></div>';
+  });
+  h+='</div>';
+  h+='<h3>Practice, then assessed</h3><p class="body">Rule 2 asks for two linked activities on the same topic. Only the second one is marked.</p>'
+   +'<div class="tablewrap"><table><thead><tr><th>Arrangement</th><th>Practice &middot; week 5, no mark</th><th>Assessed &middot; week 9</th></tr></thead><tbody>'
+   +'<tr><td class="k">In class only</td><td>M10 Structured Academic Controversy, 90 minutes in class</td><td>M8 Role-Play on the assessed scenario, 90 minutes in class</td></tr>'
+   +'<tr><td class="k wrap">With an external partner</td><td>M4 Design Thinking with a built-in reframing test, 90 minutes</td><td>M7 Living Lab with a real, monitored change, half a day. Requires a partner agreement and a risk assessment.</td></tr>'
+   +'</tbody></table></div>'
+   +'<div class="stack"><div class="panel p-step"><span class="tag">What the feedback between them does</span><ol>'
+   +'<li>After run one, students self-assess against the published rubric. Ten minutes, in writing.</li>'
+   +'<li>You return one sentence naming the single criterion to work on. Not a grade.</li>'
+   +'<li>Run two uses a different scenario and the identical rubric.</li>'
+   +'<li>Only run two is marked. Run one carries no mark, and is the reason run two is usable.</li>'
+   +'</ol></div>'
+   +'<div class="panel p-warn"><span class="tag">Methods that cannot carry a claim</span><p><strong>Gamification</strong> develops motivation only. <strong>An unprompted reflective essay</strong> evidences Self-awareness, not systemic reasoning. <strong>A written exam</strong> reaches only the knowledge layer, not the boundary decision.</p></div></div>';
+  return h;
+}
+
+function sec_design(){
+  var h = head("Section 4","The design map","Design it, then test it",
+    "Six steps from a topic to a reported mark, and five tests that stop a weak design from continuing.");
+  h+='<h3>The six-step design workflow</h3>';
+  var steps=[
+   ["Identify the system","Choose a topic where elements genuinely interact and a consequence can plausibly appear elsewhere.","Your discipline"],
+   ["Select the pedagogy","Choose methods that require learners to decide a boundary and trace what happens at its edge.","Choose a method"],
+   ["Plan practice and assessment","Practice map, then feedback, then assessed map.","Choose a method"],
+   ["Write the assessment brief","Ask for individual evidence matching the four criteria, one clause each.","The assignment"],
+   ["Write evidence indicators","State where the marker looks, and what each rubric level looks like in this task.","The rubric"],
+   ["Align, moderate and report","Check alignment, second-mark a sample, then report PLO12 attainment.","Align and audit"]];
+  var h2='<div class="chain">';
+  steps.forEach(function(s,i){
+    if(i) h2+='<div class="tick"><svg width="11" height="9" viewBox="0 0 11 9" aria-hidden="true"><path d="M5.5 9L0 0h11z" fill="currentColor"/></svg></div>';
+    h2+='<div class="link"><div class="no">'+(i+1)+'</div><div class="txt"><b>'+s[0]+'</b><span>'+s[1]+'</span></div><div class="meta">'+s[2]+'</div></div>';
+  });
+  h2+='</div>';
+  h+=h2;
+  h+='<div class="stack"><div class="panel p-def"><span class="tag">Key idea</span><p>The design is only as strong as its weakest link. Build the learning activity, the assessment and the rubric as one connected system, not as three separate decisions.</p></div></div>';
+  h+='<h3>The five tests</h3><p class="body">The tests are not steps. Answer each one about the design you have in mind. A failure sends you back to a step above rather than letting the design continue.</p>';
+  h+='<div class="stack" id="testrunner">';
+  TESTS.forEach(function(t,i){
+    h+='<div class="q" data-i="'+i+'"><div class="qhead"><span class="qn">T'+(i+1)+'</span><span class="qtext"><strong>'+t.name+'</strong><br>'+t.q+'</span></div>'
+     +'<div class="opts"><button class="btn sm t-ans" data-v="Yes">Yes</button><button class="btn sm t-ans" data-v="No">No</button></div>'
+     +'<div class="fb"></div></div>';
+  });
+  h+='</div><div class="row"><button class="btn" id="testreset">Clear answers</button></div>';
+  h+='<div class="stack"><div class="panel p-note"><span class="tag">Why the tests run in this order</span><p>Each test catches a fault the next step would hide. A weak topic produces a busy-looking activity; an activity with no built-in boundary decision produces a colourful-looking diagram; a shared diagram produces a mark that looks fair; and an assignment answerable without the competency produces a rubric that looks rigorous.</p></div></div>';
+  return h;
+}
+
+function sec_brief(){
+  var c=C();
+  var h = head("Section 5.1 to 5.4","Designing the assessment","The assignment brief",
+    "One assignment carries Systems Thinking. Write it in four clauses, one per criterion, and attach an individual submission to every group mapping activity.");
+  h+='<div class="grid g2">'
+   +'<div class="card"><span class="n" style="color:var(--rose)">Assesses knowledge about it</span><h5 style="font-family:var(--serif);font-weight:400;font-style:italic">&ldquo;Discuss the importance of systems thinking in sustainable water management, with examples.&rdquo;</h5><p>A student who memorised the lecture and never drew a boundary scores full marks. Nothing here supports four rubric levels except length and polish.</p></div>'
+   +'<div class="card accent"><span class="n">Assesses the competency</span><h5 style="font-family:var(--serif);font-weight:400;font-style:italic">&ldquo;After the week 9 boundary exercise, submit: (a) a one-page statement of the system boundary you drew and what you excluded; (b) an annotated map tracing one feedback loop; (c) one paragraph naming a consequence appearing outside the mapped elements; (d) one paragraph drawing a conclusion and naming the leverage point it reveals.&rdquo;</h5><p>Four clauses, four criteria. It cannot be completed without having drawn and interpreted the map.</p></div>'
+   +'</div>';
+  h+='<h3>The four clause rule</h3>'
+   +'<div class="tablewrap"><table><thead><tr><th>Clause</th><th>Criterion</th><th>What it must require</th></tr></thead><tbody>'
+   +'<tr><td class="k">(a)</td><td class="k wrap"><span class="crit-n">1</span> Boundary and elements</td><td>The system boundary, and what was deliberately excluded.</td></tr>'
+   +'<tr><td class="k">(b)</td><td class="k wrap"><span class="crit-n">2</span> Interconnections</td><td>An annotated map tracing a feedback loop, not just a chain of cause and effect.</td></tr>'
+   +'<tr><td class="k">(c)</td><td class="k wrap"><span class="crit-n">3</span> Consequences across scale</td><td>A consequence appearing outside the mapped elements, or later in time.</td></tr>'
+   +'<tr><td class="k">(d)</td><td class="k wrap"><span class="crit-n">4</span> Interpretation</td><td>A defensible conclusion the map supports, and the leverage point it reveals.</td></tr>'
+   +'</tbody></table></div>'
+   +'<div class="stack"><div class="panel p-rule"><p>A <strong>criterion with no clause</strong> means students were never asked for that evidence, so its absence cannot be marked down. A <strong>clause with no criterion</strong> is work you asked for and will not mark.</p></div></div>';
+  h+='<h3>The individual evidence rule</h3>'
+   +'<div class="stack"><div class="panel p-warn"><span class="tag">Two fixes that do not work</span><p>A shared map with no individual annotation measures whoever held the pen. A group viva produces one performance, not four judgements.</p></div>'
+   +'<div class="panel p-step"><span class="tag">Two that do</span><ul>'
+   +'<li><strong>An individual written interpretation.</strong> What the map shows, why the boundary sits there, and what remains uncertain.</li>'
+   +'<li><strong>A justified peer assessment.</strong> Valid provided you mark the <em>justification</em>, never the ratings.</li>'
+   +'</ul></div>'
+   +'<div class="panel p-note"><span class="tag">In '+esc(c.n)+'</span><p>The individual submission for this cluster is the <strong>'+esc(c.s)+'</strong>, attached to: '+esc(c.am.toLowerCase())+'.</p></div></div>';
+  h+='<h3>Three traps when marking</h3>'
+   +'<div class="tablewrap"><table><thead><tr><th>Trap</th><th>Looks like</th><th>Fix</th></tr></thead><tbody>'
+   +'<tr><td class="k">Marking the group</td><td>The shared map scores 78, so all five students are recorded as Proficient.</td><td>The individual interpretation. Five students who drew one map routinely land on three different levels.</td></tr>'
+   +'<tr><td class="k">Marking the drawing</td><td>A neatly drawn diagram scores above a messier one with a sharper boundary.</td><td>Precision of reasoning: the boundary stated, the loop traced, the consequence named. Never presentation.</td></tr>'
+   +'<tr><td class="k">Marking volume</td><td>The student who drew the most boxes, or the longest map, scores highest.</td><td>Whether a boundary was justified and a genuine loop, not a chain, was traced.</td></tr>'
+   +'</tbody></table></div>';
+  h+='<h3>Placement, weight and threshold</h3>'
+   +'<div class="stack"><div class="panel p-rule"><span class="tag">Four decisions</span><ol>'
+   +'<li>Assess Systems Thinking through <strong>one</strong> component, not several. Split across three and none discriminates.</li>'
+   +'<li>Weight it <strong>15 to 25 per cent</strong>. Below 10 per cent students under-invest and the evidence degrades.</li>'
+   +'<li>Attainment is computed from the four criteria alone. Other criteria may carry course marks; state this in the outline.</li>'
+   +'<li><strong>Mark all four levels.</strong> The rubric is not capped for Systems Thinking.</li>'
+   +'</ol></div>'
+   +'<div class="panel p-note"><p>The group mapping event is not marked for PLO12. It creates the conditions; the individual interpretation carries the judgement. The week 5 practice run carries no mark at all.</p></div></div>';
+  return h;
+}
+
+function sec_rubric(){
+  var c=C();
+  var h = head("Section 5.5 to 5.8","The rubric","The rubric, written for your task",
+    "Four criteria, four levels, and descriptors you must rewrite in the language of your own discipline. Adapting the wording is required, not optional.");
+  h+='<div class="stack"><div class="panel p-rule"><span class="tag">Fixed, and yours</span><p><strong>Fixed:</strong> four criteria and their names; four levels named Limited, Developing, Proficient, Exemplary; and the judgement each criterion captures.</p><p><strong>Yours:</strong> the wording of the descriptors. A descriptor that still says &ldquo;the mapped elements&rdquo; when your task is about wards, catchments or supply chains has not been adapted.</p></div></div>';
+  h+='<h3>Worked rubric<span class="chip">'+esc(c.n)+'</span></h3>';
+  h+='<p class="body">Judged from the <strong>'+esc(c.s).toLowerCase()+'</strong>. The four criteria and level names are identical in every cluster; only the descriptor wording changes.</p>';
+  h+='<div class="tablewrap"><table class="levels worked"><thead><tr><th>Criterion</th><th>Judged from</th>';
+  LEVELS.forEach(function(l){ h+='<th>'+l+'</th>'; });
+  h+='</tr></thead><tbody>';
+  c.r.forEach(function(row,i){
+    h+='<tr><td class="k wrap"><span class="crit-n">'+(i+1)+'</span><br>'+CRIT[i].n+'</td>';
+    row.forEach(function(cell,j){ h+='<td'+(j===0?' style="color:var(--ink)"':'')+'>'+esc(cell)+'</td>'; });
+    h+='</tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<h3>How to adapt it, in five steps</h3><div class="stack tight">';
+  [["Keep the four criteria and their names unchanged.","Boundary and elements; Interconnections; Consequences across scale; Interpretation. Do not add a fifth, drop one, or reorder them."],
+   ["Rewrite each descriptor in disciplinary language.","Name the actual elements, the actual excluded factor and the actual consequence in your task &mdash; not &ldquo;the system&rdquo;."],
+   ["Write level 1 and level 4 first.","Level 1 is the commonest error, the floor. Level 4 is the exemplary move, the ceiling. Then split the gap to create levels 2 and 3."],
+   ["Differentiate by quality of reasoning, not by counting.","One consequence named with what it changes is level 4. Three named without that is level 3."],
+   ["Test each criterion against the one rule.","Could a student score full marks on it without using the competency? If yes, it is measuring drawing skill or effort &mdash; rewrite it."]
+  ].forEach(function(s,i){ h+='<div class="panel p-step"><span class="tag">Step '+(i+1)+'</span><p><strong>'+s[0]+'</strong> '+s[1]+'</p></div>'; });
+  h+='</div>';
+  h+='<h3>Four faults in a rubric</h3>'
+   +'<div class="tablewrap"><table><thead><tr><th>Fault</th><th>In a Systems Thinking rubric</th><th>Fix</th></tr></thead><tbody>'
+   +'<tr><td class="k wrap">Adjectives instead of descriptors</td><td>Excellent / Good / Fair / Poor system map. This is a grading scale, not a behaviour-based rubric.</td><td>Use the fixed descriptor set, adapted to your task.</td></tr>'
+   +'<tr><td class="k wrap">Levels separated by counting</td><td>&ldquo;Four elements mapped&rdquo; versus &ldquo;two&rdquo;. This measures volume, not quality of reasoning.</td><td>Separate levels by reasoning and effect.</td></tr>'
+   +'<tr><td class="k wrap">Criteria restating the brief</td><td>&ldquo;Map is neatly drawn and within the page limit.&rdquo; This assesses diagram presentation.</td><td>Keep it outside the four Systems Thinking criteria.</td></tr>'
+   +'<tr><td class="k wrap">Written after the task</td><td>A rubric created at marking time. Students were never asked for the boundary justification.</td><td>Publish the rubric with the brief, and record the date.</td></tr>'
+   +'</tbody></table></div>'
+   +'<div class="stack"><div class="panel p-warn"><span class="tag">Keep the four independent</span><p>If two criteria always rise and fall together, they are one criterion written twice. Name each criterion for the judgement it captures, never for a feature of the output: &ldquo;Interconnections&rdquo;, not &ldquo;the diagram&rdquo;.</p></div></div>';
+  return h;
+}
+
+function sec_audit(){
+  var c=C();
+  var h = head("Section 6","Alignment and quality audit","Align and audit",
+    "An auditor reads the alignment table, then asks to see the marked scripts. This section makes the design traceable before that happens.");
+  h+='<div class="fixedrow" style="grid-template-columns:repeat(5,minmax(0,1fr))">'
+   +'<div style="border-top-color:var(--teal)"><b>SDG</b><span>One primary goal</span></div>'
+   +'<div style="border-top-color:var(--teal)"><b>PLO12</b><span>Programme outcome</span></div>'
+   +'<div style="border-top-color:var(--teal)"><b>CLO</b><span>Given in the syllabus</span></div>'
+   +'<div style="border-top-color:var(--teal)"><b>Criteria 1&ndash;4</b><span>The four criteria</span></div>'
+   +'<div style="border-top-color:var(--teal)"><b>Script</b><span>The marked submission</span></div></div>';
+  h+='<div class="stack"><div class="panel p-note"><p>Only the CLO is directly assessed; every other layer is a claim traceable through it. Criterion numbering is what makes the chain auditable: a reviewer follows a competency to a named criterion on a named rubric, and from there to one student&rsquo;s script.</p></div></div>';
+  h+='<h3>Course outline wording</h3><p class="body">Fill in the four blanks and copy the paragraph into your course outline.</p>'
+   +'<div class="grid g4" style="margin-top:14px">'
+   +'<div class="field" style="margin:0"><label for="f_partner">Partner competency</label><input id="f_partner" placeholder="e.g. Normative Competency"></div>'
+   +'<div class="field" style="margin:0"><label for="f_sdg">Primary SDG</label><input id="f_sdg" placeholder="e.g. SDG 6"></div>'
+   +'<div class="field" style="margin:0"><label for="f_week">Submission week</label><input id="f_week" placeholder="e.g. 11"></div>'
+   +'<div class="field" style="margin:0"><label for="f_act">Group activity week</label><input id="f_act" placeholder="e.g. 9"></div>'
+   +'</div>'
+   +'<div class="outline" id="outlinebox"></div>'
+   +'<div class="row"><button class="btn primary" id="copyoutline">Copy paragraph</button></div>';
+  h+='<h3>The semester schedule</h3>'
+   +'<div class="tablewrap"><table><thead><tr><th>When</th><th>What you do</th></tr></thead><tbody>'
+   +'<tr><td class="k wrap">Before semester</td><td>Publish the rubric inside the course outline, with descriptors already adapted to your discipline.</td></tr>'
+   +'<tr><td class="k">Week 1</td><td>Tell students the competency in plain language, and that a group mapping event will produce an individual mark.</td></tr>'
+   +'<tr><td class="k">Week 4</td><td>Release the brief with the rubric. Record the date in the course file.</td></tr>'
+   +'<tr><td class="k">Week 5</td><td>Practice map. Students self-assess; return one sentence naming one criterion. No mark.</td></tr>'
+   +'<tr><td class="k">Week 9</td><td>Assessed map. Use the same rubric with a different scenario.</td></tr>'
+   +'<tr><td class="k">Week 11</td><td>Individual submission, plus the structured self-assessment.</td></tr>'
+   +'<tr><td class="k">Weeks 12&ndash;13</td><td>Mark, then second-mark a ten per cent sample and every borderline case.</td></tr>'
+   +'<tr><td class="k wrap">After results</td><td>Revise weak evidence indicators &mdash; never the fixed descriptors. Report attainment to the programme.</td></tr>'
+   +'</tbody></table></div>';
+  h+='<h3>Five ways an alignment claim fails</h3>'
+   +'<div class="tablewrap"><table><thead><tr><th>Failure</th><th>What the auditor sees</th><th>Caught by</th></tr></thead><tbody>'
+   +'<tr><td class="k wrap">Competency named, not required</td><td>Systems Thinking is in the syllabus but no assignment requires a boundary decision. The commonest failure, invisible until the scripts are read.</td><td>The list test</td></tr>'
+   +'<tr><td class="k wrap">Assignment misses the competency</td><td>The shared map is there; the individual interpretation is not.</td><td>The attribution test</td></tr>'
+   +'<tr><td class="k wrap">Rubric not published</td><td>Criteria written at marking time. Students were never asked for the boundary justification.</td><td>Fourth rubric fault</td></tr>'
+   +'<tr><td class="k wrap">Levels not defended</td><td>Two markers cannot agree on level 3 versus level 4, and no written clarification exists.</td><td>Moderation</td></tr>'
+   +'<tr><td class="k wrap">No individual attribution</td><td>All group members recorded at the same level, with no document explaining why.</td><td>The individual evidence rule</td></tr>'
+   +'</tbody></table></div>'
+   +'<div class="stack"><div class="panel p-warn"><span class="tag">Two further failures worth naming</span><p><strong>SDG as decoration:</strong> a goal logo on the outline with nothing in the content connecting to it. <strong>One CLO, five SDGs:</strong> broad mapping that dilutes everything and evidences nothing. Claim one primary goal the content genuinely touches.</p></div></div>';
+  h+='<h3>Before you publish the course outline</h3><div class="check" id="auditlist"></div>';
+  h+='<h3>Moderation and second marking</h3><div class="check" id="modlist"></div>';
+  return h;
+}
+
+function sec_checks(){
+  var h = head("Checks 1 to 3","Self-checks","Check what you have understood",
+    "Answer alone, then compare. The comparison between what you thought and what is here is the learning.");
+  h+='<h3>Check 1 &middot; does this assess the Systems Thinking competency?</h3>';
+  h+='<div class="stack" id="c1a"></div>';
+  h+='<h3>Check 1 &middot; which criterion is this behaviour?</h3>';
+  h+='<div class="stack" id="c1b"></div>';
+  h+='<div class="score"><span class="big" id="c1score">0/10</span><span class="lbl">Six or below means it is worth re-reading <strong>What it means</strong> and <strong>The four criteria</strong> before continuing.</span></div>';
+  h+='<div class="row"><button class="btn" id="c1reset">Start Check 1 again</button></div>';
+  h+='<h3>Check 2 &middot; name the fault in the rubric or brief</h3><p class="body">Tap each item to see the fault and why it matters.</p>';
+  h+='<div class="stack" id="c2"></div>';
+  h+='<h3>Check 3 &middot; diagnose six real assignments</h3><p class="body">Six assignments taken from real course files. Decide for yourself whether each assesses Systems Thinking and what the smallest fix would be, then reveal the answer.</p>';
+  h+='<div class="stack" id="c3"></div>';
+  h+='<div class="stack"><div class="panel p-def"><span class="tag">The seventh question</span><p>Now apply the same two questions to your own assignment. Does it assess Systems Thinking? If not, what is the smallest change? It is the only one an examiner will ever see the answer to.</p></div></div>';
+  return h;
+}
+
+function sec_plan(){
+  var c=C();
+  var h = head("Worksheets W1 to W5","Your record","My plan",
+    "The same lines the workshop worksheets ask for. Everything you type is saved in this browser only, and can be copied out at the end.");
+  var fields=[
+   ["course","Course code and title","","input"],
+   ["topic","Topic already taught","Start from: "+c.t,"input"],
+   ["system","The system, in one sentence","Elements interact so that ..., and the consequence appears in ...","textarea"],
+   ["excluded","What is hardest to bound","This is where criterion 1 is tested.","input"],
+   ["m1","Practice activity: method and week","No mark. Feedback is one sentence naming one criterion.","input"],
+   ["m2","Assessed activity: method and week","Same rubric, different scenario.","input"],
+   ["sub","Individual submission and length","Suggested for your cluster: "+c.s,"input"],
+   ["weight","Submission week and weight","15 to 25 per cent, one component only.","input"],
+   ["ca","Clause (a) &rarr; criterion 1, boundary and elements","",'textarea'],
+   ["cb","Clause (b) &rarr; criterion 2, interconnections","","textarea"],
+   ["cc","Clause (c) &rarr; criterion 3, consequences across scale","","textarea"],
+   ["cd","Clause (d) &rarr; criterion 4, interpretation","","textarea"]
+  ];
+  h+='<h3>Get a first draft</h3>';
+  h+='<div class="stack"><div class="panel p-step"><span class="tag">Optional &middot; works with any AI</span>'
+   +'<p class="body">Fill in your course and topic below, then use any AI assistant you already have '
+   +'&mdash; Claude, ChatGPT, Gemini, Copilot, whichever &mdash; to draft the rest. Nothing is sent anywhere by this page.</p>'
+   +'<div class="aistep"><span class="num">1</span><div class="txt">Type your <strong>course code and title</strong> and <strong>topic</strong> in the first two fields below.</div></div>'
+   +'<div class="aistep"><span class="num">2</span><div class="txt">Press <strong>Copy AI prompt</strong>, then paste it into your AI assistant.</div></div>'
+   +'<div class="aistep"><span class="num">3</span><div class="txt">Copy its whole reply, paste it in the box below and press <strong>Fill in my plan</strong>.</div></div>'
+   +'<div class="row"><button class="btn primary" id="copyprompt">Show &amp; copy AI prompt</button>'
+   +'<button class="btn" id="toggleai">Paste the reply</button></div>'
+   +'<p class="ainote" id="aistatus" hidden></p>'
+   +'<div class="aibox" id="promptbox" hidden>'
+   +'<label for="aiprompt">Your prompt</label>'
+   +'<textarea id="aiprompt" readonly></textarea>'
+   +'<div class="row"><button class="btn" id="selectall">Select all</button>'
+   +'<button class="btn" id="copyagain">Copy again</button>'
+   +'<button class="btn" id="hideprompt">Hide</button></div></div>'
+   +'<div class="aibox" id="aibox" hidden>'
+   +'<label for="aireply">Paste the AI reply here</label>'
+   +'<textarea id="aireply" placeholder="Paste the whole reply. Extra text around the JSON is fine."></textarea>'
+   +'<div class="row"><button class="btn primary" id="fillplan">Fill in my plan</button></div></div>'
+   +'<p class="ainote">Drafted fields are marked in amber. They are a starting point, not a finished plan '
+   +'&mdash; read every line and change what does not fit your students. The mark clears once you edit a field.</p>'
+   +'</div></div>';
+  h+='<h3>Your assessment plan</h3>';
+  h+='<div style="max-width:70ch">';
+  fields.forEach(function(f){
+    h+='<div class="field"><label for="p_'+f[0]+'">'+f[1]+'</label>'
+     +(f[3]==="textarea"?'<textarea id="p_'+f[0]+'" class="pf" data-k="'+f[0]+'"></textarea>':'<input id="p_'+f[0]+'" class="pf" data-k="'+f[0]+'">')
+     +(f[2]?'<span class="help">'+esc(f[2])+'</span>':'')+'</div>';
+  });
+  h+='</div>';
+  h+='<div class="stack"><div class="panel p-rule"><span class="tag">Before you file it</span><ul>'
+   +'<li>Could a well-prepared student answer this fully with a list and no drawn relationship? If yes, sharpen the boundary decision.</li>'
+   +'<li>If the group produced one shared map, can you still mark one named student? If no, the individual evidence is not doing its work.</li>'
+   +'<li>Could a student score full marks without using the competency? If yes, fix the brief, not the rubric.</li>'
+   +'</ul></div></div>';
+  h+='<div class="row"><button class="btn primary" id="printplan">Print or save as PDF</button>'
+   +'<button class="btn" id="copyplan">Copy my plan</button>'
+   +'<button class="btn" id="clearplan">Clear all fields</button></div>';
+  h+='<h3>Sources</h3>'
+   +'<div class="tablewrap"><table><tbody>'
+   +'<tr><td class="k">UNESCO (2017)</td><td>Education for Sustainable Development Goals: Learning Objectives. Source of the competency definition, the three learning domains and the conditions on assessment.</td></tr>'
+   +'<tr><td class="k wrap">MQA (2024)</td><td>Malaysian Qualifications Framework, Second Edition. Source of the national mandate and the Global Sustainability Agenda.</td></tr>'
+   +'<tr><td class="k">PEMACU ESD UPM</td><td><em>Teaching and Assessing the Eight ESD Competencies</em> (UPM ESD Guidebook), and SIM-ESD-ST-01, Module 2: The Systems Thinking Competency.</td></tr>'
+   +'</tbody></table></div>'
+   +'<div class="stack"><div class="panel p-note"><p>Criteria 1 to 3 operationalise named abilities in the UNESCO definition. Criterion 4, interpretation, was added by UPM so that a map produces a usable conclusion. Four criteria, four named levels and the aggregation rule are UPM design decisions &mdash; do not present them as UNESCO requirements.</p></div></div>';
+  return h;
+}
+
+</script>
+
+<script>
+/* ============ CHECK & TEST DATA ============ */
+var TESTS=[
+ {name:"The list test",q:"Could a well-prepared student answer fully with a list and no drawn relationship?",fail:"Yes",
+  send:"Back to step 1. The topic is a list, not a system. Choose another topic and start again."},
+ {name:"The boundary test",q:"Could the activity be completed without the student ever stating what was excluded?",fail:"Yes",
+  send:"Back to step 2. The boundary decision is not built in. Sharpen it in the brief or the constraint."},
+ {name:"The attribution test",q:"If the group produced one shared map, can you still mark one named student?",fail:"No",
+  send:"Back to step 4. Attach an individual interpretation to the group mapping activity."},
+ {name:"The one rule",q:"Could a student score full marks without using the competency?",fail:"Yes",
+  send:"Back to step 4. The assignment is the problem, not the rubric. Fix the brief."},
+ {name:"The moderation test",q:"Do two markers agree within one level on every criterion?",fail:"No",
+  send:"Stay in marking. Record a written clarification of how the descriptor is read; leave the descriptor unchanged."}
+];
+var C1A=[
+ ["Students list eight factors affecting a coral reef's health, one per bullet point.","No","A list of causes is not a system; nothing shows how the parts act on each other."],
+ ["A student states the system boundary and names one element deliberately excluded.","Yes","Criterion 1 at level 3, reaching level 4 if it also states what including the excluded element would change."],
+ ["An essay defines systems thinking and explains its importance, with no diagram.","No","The student describes the competency instead of using it."],
+ ["A student draws a colourful diagram of twelve boxes joined by one-directional arrows.","No","A chain is not a loop. Visual complexity is not criterion-2 evidence."],
+ ["A student traces a feedback loop and names a consequence appearing outside the mapped elements.","Yes","Criteria 2 and 3 together."],
+ ["A multiple-choice test asks which of four diagrams best represents a supply chain.","No","Recognition from a list is comprehension, not construction."]
+];
+var C1B=[
+ ["States the boundary and justifies excluding a plausible fifth element.",1,"Boundary and elements."],
+ ["Draws an arrow from output back to input and explains why the effect is delayed by two cycles.",2,"Interconnections."],
+ ["Names an effect on a group never mentioned in the mapped elements.",3,"Consequences across scale."],
+ ["Draws one conclusion the map supports and identifies which single change would move the whole system.",4,"Interpretation."]
+];
+var C2=[
+ ["&ldquo;Level 4: maps six or more elements.&rdquo;","Levels separated by counting","Six elements mapped is not better reasoning than four mapped with a justified boundary."],
+ ["&ldquo;Level 3: good understanding of the system.&rdquo;","An adjective instead of a descriptor","It tells the student nothing about what to do differently, and two markers will read it differently."],
+ ["&ldquo;Map is neatly drawn and correctly labelled.&rdquo; Should it carry PLO12?","No, it restates the brief","Keep it as a course mark, outside the four criteria and outside the attainment calculation."],
+ ["A single group map is the only submission.","Add an individual written interpretation","A shared map is evidence of a group. Only an individual submission lets the rubric be applied to a person."],
+ ["The brief has three clauses; the rubric has four criteria.","One criterion has no clause","Students were never asked for that evidence, so its absence cannot be marked down. Amend the brief, not the rubric."],
+ ["Maps are marked on how visually complex they look.","Marking visual complexity","Mark precision and reasoning: the boundary stated, the loop traced, the consequence named."],
+ ["The levels are renamed Weak, Fair, Good, Excellent.","The four level names may not be renamed","Descriptor wording must be adapted to your discipline, but the four criteria and the four level names are fixed."],
+ ["A year 1 course sets the threshold at Proficient and caps the rubric at level 3.","Capping is the error","All four levels are marked for Systems Thinking. Only the threshold moves by year of study."]
+];
+var C3=[
+ ["Engineering","In groups of five, draw a treatment-train diagram and submit a 30-page report. Marks for technical accuracy, feasibility and presentation.","No. Add a two-page individual memo naming the boundary and the consequence found outside it.","A group diagram marked for technical quality. Nothing attributes a level to a person."],
+ ["Law","Draft a memorandum of advice on the client's prospects, citing relevant authority.","No. Add a clause requiring the statutory boundary and one unrepresented interest to be named.","Advice for a client is not a system boundary. As written it evidences no criterion."],
+ ["Education","Reflect on your experience of mapping a system during this course.","No. Replace with four set prompts matching the four criteria.","Unprompted reflection produces sentiment. Prompts are what turn a reflection into evidence."],
+ ["Hospitality, Tourism, Sport, Recreation and Services","Attend the industry placement and submit a logbook of hours completed and tasks observed.","No. Replace the logbook with prompted entries on the boundary and a consequence observed.","Hours and tasks are attendance, not competence. Presence at a site evidences nothing on its own."],
+ ["Computer Science and Information Technology","Individually, state the boundary of your system and name one consequence appearing outside it.","Yes. Criteria 1 and 3 at level 3, reaching level 4 if it states what a wider boundary would change.","Individual, specific, and mapped to two criteria."],
+ ["Arts and Humanities","Present your exhibition proposal to the panel. Marks for scholarship, coherence and delivery.","No. Add an interpretive statement naming the collection's boundary and the source community's account.","Scholarship and delivery sit under other outcomes. The boundary decision is what carries the competency."]
+];
+var AUDIT=[
+ "The system's boundary and elements are written as one sentence",
+ "A practice map and a later assessed map, with feedback between them",
+ "An individual interpretation attached to every group mapping activity",
+ "Four clauses in the brief, one per criterion",
+ "Four criteria and four levels, published with the brief",
+ "Four levels marked, and the rubric not capped",
+ "A named second marker",
+ "The course file records the guidebook edition used"
+];
+var MOD=[
+ "Rubric published before submission, date recorded",
+ "Two markers scored the same three scripts before marking began",
+ "Discrepancies discussed; criteria clarified in writing, descriptors left unchanged",
+ "Ten per cent sample and all borderline cases second-marked",
+ "One anonymised exemplar retained per level, per criterion where possible",
+ "Any criterion on which two markers disagreed by more than one level flagged to the programme"
+];
+
+/* ============ RENDER ============ */
+var BUILD={start:sec_start,meaning:sec_meaning,criteria:sec_criteria,field:sec_field,methods:sec_methods,
+           design:sec_design,brief:sec_brief,rubric:sec_rubric,audit:sec_audit,checks:sec_checks,plan:sec_plan};
+var $=function(s,r){ return (r||document).querySelector(s); };
+var $$=function(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+
+function buildPicker(){
+  var sel=$("#cluster");
+  sel.innerHTML=CLUSTERS.map(function(c,i){ return '<option value="'+i+'"'+(i===ci?' selected':'')+'>'+(i+1)+'. '+esc(c.n)+'</option>'; }).join("");
+  sel.addEventListener("change",function(){
+    ci=parseInt(sel.value,10); store.set("cluster",ci);
+    render(current,true);
+    toast("Examples now written for "+CLUSTERS[ci].n);
+  });
+}
+function buildNav(){
+  var nav=$("#nav"), html="";
+  SECTIONS.forEach(function(s){
+    if(s.g){ html+='<div class="navgroup">'+s.g+'</div>'; return; }
+    html+='<button class="navbtn" data-id="'+s.id+'"><span class="ref">'+s.ref+'</span><span>'+s.nav+'</span></button>';
+  });
+  nav.innerHTML=html;
+  $$(".navbtn").forEach(function(b){
+    b.addEventListener("click",function(){ go(b.dataset.id); });
+  });
+}
+function markNav(){
+  $$(".navbtn").forEach(function(b){
+    b.classList.toggle("on", b.dataset.id===current);
+    b.classList.toggle("done", seen.indexOf(b.dataset.id)>-1);
+  });
+  var n=seen.length, t=IDS.length;
+  $("#progtext").textContent=n+" of "+t+" sections opened";
+  $("#progbar").style.width=Math.round(n/t*100)+"%";
+  var s=SECTIONS.filter(function(x){return x.id===current})[0];
+  if(s) $("#mobwhere").textContent=s.nav;
+}
+function go(id){
+  current=id;
+  if(seen.indexOf(id)<0){ seen.push(id); store.set("seen",seen); }
+  render(id);
+  markNav();
+  $("#rail").classList.remove("open");
+  $("#menubtn").setAttribute("aria-expanded","false");
+  window.scrollTo({top:0,behavior:"auto"});
+}
+function nextPrev(){
+  var i=IDS.indexOf(current), out='<div class="jump">';
+  if(i>0) out+='<button class="btn sm" data-goto="'+IDS[i-1]+'">&larr; '+SECTIONS.filter(function(s){return s.id===IDS[i-1]})[0].nav+'</button>';
+  if(i<IDS.length-1) out+='<button class="btn sm primary" data-goto="'+IDS[i+1]+'">'+SECTIONS.filter(function(s){return s.id===IDS[i+1]})[0].nav+' &rarr;</button>';
+  return out+'</div>';
+}
+function render(id){
+  var m=$("#main");
+  m.innerHTML='<section class="view on">'+BUILD[id]()
+    +'<div class="pagefoot"><span>UPM ESD Series &middot; SIM-ESD-ST-01 &middot; '+esc(CLUSTERS[ci].n)+'</span>'+nextPrev()+'</div></section>';
+  var meta=SECTIONS.filter(function(x){return x.id===id})[0];
+  var no=parseInt(meta.ref,10);
+  $$("section.view h3",m).forEach(function(h,i){
+    h.insertAdjacentHTML("afterbegin",'<span class="secnum">'+no+"."+(i+1)+'</span>');
+  });
+  $$("[data-goto]",m).forEach(function(b){ b.addEventListener("click",function(){ go(b.dataset.goto); }); });
+  wire(id);
+}
+
+/* ============ WIRING ============ */
+function toast(msg){
+  var t=$("#toast"); t.textContent=msg; t.classList.add("show");
+  clearTimeout(t._h); t._h=setTimeout(function(){ t.classList.remove("show"); },2200);
+}
+function copyText(s){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(s).then(function(){ toast("Copied to clipboard"); },function(){ toast("Select the text and copy manually"); });
+  } else { toast("Select the text and copy manually"); }
+}
+
+function wire(id){
+  if(id==="methods"){
+    $$(".method > button").forEach(function(b){
+      b.addEventListener("click",function(){
+        var p=b.parentNode, open=p.classList.toggle("open");
+        b.setAttribute("aria-expanded",open?"true":"false");
+        $(".chev",b).textContent=open?"\u2212":"+";
+      });
+    });
+    $$(".fam-f").forEach(function(f){
+      f.addEventListener("click",function(){
+        $$(".fam-f").forEach(function(x){ x.setAttribute("aria-pressed",String(x===f)); });
+        var fam=f.dataset.fam;
+        $$(".method").forEach(function(m){ m.style.display=(fam==="All"||m.dataset.fam===fam)?"":"none"; });
+      });
+    });
+  }
+
+  if(id==="design"){
+    var ans={};
+    function paint(){
+      $$("#testrunner .q").forEach(function(q){
+        var i=+q.dataset.i, t=TESTS[i], fb=$(".fb",q), v=ans[i];
+        $$(".t-ans",q).forEach(function(b){ b.setAttribute("aria-pressed",String(b.dataset.v===v)); });
+        if(!v){ fb.className="fb"; fb.innerHTML=""; return; }
+        if(v===t.fail){ fb.className="fb show wrong"; fb.innerHTML="<b>Fails.</b> "+t.send; }
+        else { fb.className="fb show right"; fb.innerHTML="<b>Passes.</b> Continue to the next test."; }
+      });
+    }
+    $$(".t-ans").forEach(function(b){
+      b.addEventListener("click",function(){
+        ans[+b.closest(".q").dataset.i]=b.dataset.v; paint();
+      });
+    });
+    $("#testreset").addEventListener("click",function(){ ans={}; paint(); });
+  }
+
+  if(id==="audit"){
+    function outline(){
+      var p=$("#f_partner").value.trim()||"[Competency B]";
+      var s=$("#f_sdg").value.trim()||"[SDG n]";
+      var w=$("#f_week").value.trim()||"[n]";
+      var a=$("#f_act").value.trim()||"[n]";
+      var sub=CLUSTERS[ci].s.toLowerCase();
+      $("#outlinebox").innerHTML=
+       '<p>This course implements Education for Sustainable Development. Two ESD competencies are developed and assessed: <strong>Systems Thinking</strong> and <mark>'+esc(p)+'</mark>. The primary Sustainable Development Goal is <mark>'+esc(s)+'</mark>.</p>'
+      +'<p>CLOs mapped to PLO12 are assessed as follows. Systems Thinking is assessed through the '+esc(sub)+', week <mark>'+esc(w)+'</mark>, criteria 1&ndash;4. <mark>'+esc(p)+'</mark> is assessed through its own task, criteria 5&ndash;8. PLO12 attainment is computed from these criteria only.</p>'
+      +'<p>The rubric is published in this outline and released with the brief. All four levels are marked.</p>'
+      +'<p>Group mapping occurs in the week <mark>'+esc(a)+'</mark> activity. The group event is not marked for PLO12; the individual submission carries the judgement.</p>';
+    }
+    ["f_partner","f_sdg","f_week","f_act"].forEach(function(k){
+      var el=$("#"+k);
+      el.value=store.get(k,"");
+      el.addEventListener("input",function(){ store.set(k,el.value); outline(); });
+    });
+    outline();
+    $("#copyoutline").addEventListener("click",function(){ copyText($("#outlinebox").innerText); });
+
+    function list(host,items,key){
+      var saved=store.get(key,[]);
+      $(host).innerHTML=items.map(function(t,i){
+        return '<label><input type="checkbox" data-i="'+i+'"'+(saved.indexOf(i)>-1?" checked":"")+'><span>'+t+'</span></label>';
+      }).join("");
+      $$(host+" input").forEach(function(cb){
+        cb.addEventListener("change",function(){
+          var on=$$(host+" input").filter(function(x){return x.checked}).map(function(x){return +x.dataset.i});
+          store.set(key,on);
+        });
+      });
+    }
+    list("#auditlist",AUDIT,"audit");
+    list("#modlist",MOD,"mod");
+  }
+
+  if(id==="checks"){
+    var got={};
+    function score(){
+      var n=0; for(var k in got){ if(got[k]) n++; }
+      $("#c1score").textContent=n+"/10";
+    }
+    $("#c1a").innerHTML=C1A.map(function(q,i){
+      return '<div class="q" data-k="a'+i+'"><div class="qhead"><span class="qn">Q'+(i+1)+'</span><span class="qtext">'+q[0]+'</span></div>'
+        +'<div class="opts"><button class="btn sm ans" data-v="Yes">Yes</button><button class="btn sm ans" data-v="No">No</button></div><div class="fb"></div></div>';
+    }).join("");
+    $("#c1b").innerHTML=C1B.map(function(q,i){
+      var o="";
+      for(var j=1;j<=4;j++) o+='<button class="btn sm ans" data-v="'+j+'">'+j+' &middot; '+CRIT[j-1].n+'</button>';
+      return '<div class="q" data-k="b'+i+'"><div class="qhead"><span class="qn">Q'+(i+7)+'</span><span class="qtext">'+q[0]+'</span></div>'
+        +'<div class="opts">'+o+'</div><div class="fb"></div></div>';
+    }).join("");
+    $$("#c1a .ans, #c1b .ans").forEach(function(b){
+      b.addEventListener("click",function(){
+        var q=b.closest(".q"), k=q.dataset.k, isA=k[0]==="a", i=+k.slice(1);
+        var correct = isA ? C1A[i][1] : String(C1B[i][1]);
+        var why = isA ? C1A[i][2] : C1B[i][2];
+        var ok = b.dataset.v===correct;
+        got[k]=ok; score();
+        $$(".ans",q).forEach(function(x){ x.setAttribute("aria-pressed",String(x===b)); });
+        var fb=$(".fb",q);
+        fb.className="fb show "+(ok?"right":"wrong");
+        fb.innerHTML="<b>"+(ok?"Correct.":"Not this one.")+" Answer: "+(isA?correct:"criterion "+correct)+".</b> "+why;
+      });
+    });
+    score();
+    $("#c1reset").addEventListener("click",function(){
+      got={}; score();
+      $$("#c1a .fb, #c1b .fb").forEach(function(f){ f.className="fb"; f.innerHTML=""; });
+      $$("#c1a .ans, #c1b .ans").forEach(function(b){ b.setAttribute("aria-pressed","false"); });
+    });
+    $("#c2").innerHTML=C2.map(function(q,i){
+      return '<div class="reveal"><button type="button"><span class="qn">Q'+(i+1)+'</span><span class="qt">'+q[0]+'</span><span class="chev">+</span></button>'
+       +'<div class="ans"><p class="verdict">'+q[1]+'</p><p class="why">'+q[2]+'</p></div></div>';
+    }).join("");
+    $("#c3").innerHTML=C3.map(function(q,i){
+      return '<div class="reveal"><button type="button"><span class="qn">Q'+(i+1)+'</span><span class="qt"><span class="cluster">'+q[0]+'</span><br>'+q[1]+'</span><span class="chev">+</span></button>'
+       +'<div class="ans"><p class="verdict">'+q[2]+'</p><p class="why">'+q[3]+'</p></div></div>';
+    }).join("");
+    $$(".reveal > button").forEach(function(b){
+      b.addEventListener("click",function(){
+        var open=b.parentNode.classList.toggle("open");
+        $(".chev",b).textContent=open?"\u2212":"+";
+      });
+    });
+  }
+
+  if(id==="plan"){
+    $$(".pf").forEach(function(el){
+      el.value=store.get("plan_"+el.dataset.k,"");
+      el.addEventListener("input",function(){ store.set("plan_"+el.dataset.k,el.value); });
+    });
+    $$(".pf").forEach(function(el){
+      el.addEventListener("input",function(){ el.classList.remove("drafted"); });
+    });
+
+    $("#toggleai").addEventListener("click",function(){
+      var b=$("#aibox"); b.hidden=!b.hidden;
+      this.textContent=b.hidden?"Paste the reply":"Hide the paste box";
+      if(!b.hidden) $("#aireply").focus();
+    });
+
+    function hardCopy(text){
+      var tmp=document.createElement("textarea");
+      tmp.value=text;
+      tmp.setAttribute("readonly","");
+      tmp.style.cssText="position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;padding:0;border:0";
+      document.body.appendChild(tmp);
+      var ok=false;
+      try{
+        tmp.focus();
+        tmp.select();
+        tmp.setSelectionRange(0,text.length);
+        ok=document.execCommand("copy");
+      }catch(e){ ok=false; }
+      document.body.removeChild(tmp);
+      return ok;
+    }
+
+    function setStatus(msg){
+      var s=$("#aistatus");
+      if(s){ s.textContent=msg; s.hidden=!msg; }
+    }
+
+    function showPrompt(text){
+      var ta=$("#aiprompt");
+      ta.value=text;
+      $("#promptbox").hidden=false;
+
+      var sync=hardCopy(text);
+      if(sync){
+        setStatus("Copied. Paste it into your AI assistant.");
+      } else {
+        setStatus("Could not copy automatically. Press Select all below, then Ctrl+C (Cmd+C on Mac).");
+      }
+      if(!sync && navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){
+          setStatus("Copied. Paste it into your AI assistant.");
+        },function(){});
+      }
+      $("#promptbox").scrollIntoView({behavior:"smooth",block:"nearest"});
+    }
+
+    function buildPrompt(){
+      var c=C();
+      var course=($("#p_course").value||"").trim();
+      var topic=($("#p_topic").value||"").trim();
+      if(!course||!topic){ toast("Fill in course and topic first"); return null; }
+      var crit=CRIT.map(function(x,i){
+        return (i+1)+". "+x.n+" \u2014 "+x.q+"\n   Proficient looks like: "+GENERIC[i][2];
+      }).join("\n");
+      return [
+"You are helping a university lecturer design an individual assessment that measures the ESD Systems Thinking Competency.",
+"Draft the missing parts of their assessment plan.",
+"",
+"CONTEXT",
+"Course: "+course,
+"Topic already taught: "+topic,
+"Discipline cluster: "+c.n,
+"The system already in this topic: "+c.i,
+"Suggested teaching methods: "+c.p,
+"Suggested activity shape: "+c.a,
+"Suggested individual submission: "+c.s,
+"The submission must show: "+c.o,
+"",
+"THE FOUR CRITERIA THE PLAN MUST SERVE",
+crit,
+"",
+"RULES",
+"- The task must force a real boundary decision. If the boundary is given, or is the only sensible one, the activity is too weak.",
+"- There must be a plausible feedback loop, or a consequence that can appear outside the mapped elements. That is where criteria 2 and 3 live.",
+"- There must be a practice activity with feedback and no mark, then a separate assessed activity using the same rubric on a different scenario.",
+"- The individual submission carries the mark, weighted 15 to 25 per cent, as one component only.",
+"- Write about "+topic+" specifically, not about the cluster in general.",
+"- Plain sentences. No jargon the lecturer would have to decode.",
+"",
+"OUTPUT",
+"Reply with ONLY a JSON object, no commentary, using exactly these keys:",
+"{",
+'  "system": "the system in one sentence, in the form: [elements] interact so that [loop or effect], and the consequence appears in [where]",',
+'  "excluded": "what is hardest to bound, one short line",',
+'  "m1": "practice activity: method and week, e.g. M10 Structured Academic Controversy, week 5",',
+'  "m2": "assessed activity: method and week, different scenario, same rubric",',
+'  "sub": "individual submission and length, e.g. Annotated system map with interpretation, 800 words",',
+'  "weight": "submission week and weight, e.g. Week 11, 20 per cent",',
+'  "ca": "brief clause (a): what the student must do to evidence criterion 1, boundary and elements",',
+'  "cb": "brief clause (b): criterion 2, interconnections",',
+'  "cc": "brief clause (c): criterion 3, consequences across scale",',
+'  "cd": "brief clause (d): criterion 4, interpretation"',
+"}"
+      ].join("\n");
+    }
+
+    $("#copyprompt").addEventListener("click",function(){
+      var p=buildPrompt();
+      if(p) showPrompt(p);
+    });
+    $("#copyagain").addEventListener("click",function(){
+      var p=buildPrompt();
+      if(p) showPrompt(p);
+    });
+    $("#selectall").addEventListener("click",function(){
+      var ta=$("#aiprompt");
+      ta.focus();
+      ta.select();
+      try{ ta.setSelectionRange(0,ta.value.length); }catch(e){}
+      setStatus("Selected. Now press Ctrl+C, or Cmd+C on a Mac.");
+    });
+    $("#hideprompt").addEventListener("click",function(){
+      $("#promptbox").hidden=true;
+      setStatus("");
+    });
+
+    $("#fillplan").addEventListener("click",function(){
+      var raw=($("#aireply").value||"").trim();
+      if(!raw){ toast("Paste the AI reply first"); return; }
+      var s=raw.replace(/```json/gi,"").replace(/```/g,"");
+      var a=s.indexOf("{"), b=s.lastIndexOf("}");
+      if(a<0||b<a){ toast("No JSON found in that reply"); return; }
+      var obj;
+      try{ obj=JSON.parse(s.slice(a,b+1)); }
+      catch(e){ toast("Could not read that reply. Ask the AI for JSON only."); return; }
+      var keys=["system","excluded","m1","m2","sub","weight","ca","cb","cc","cd"], n=0;
+      keys.forEach(function(k){
+        var el=$("#p_"+k);
+        if(el && typeof obj[k]==="string" && obj[k].trim()){
+          el.value=obj[k].trim();
+          el.classList.add("drafted");
+          store.set("plan_"+k,el.value);
+          n++;
+        }
+      });
+      if(!n){ toast("That reply had none of the expected fields"); return; }
+      $("#aireply").value="";
+      $("#aibox").hidden=true;
+      $("#toggleai").textContent="Paste the reply";
+      toast(n+" field"+(n===1?"":"s")+" drafted \u2014 now read and edit them");
+      $("#p_system").scrollIntoView({behavior:"smooth",block:"center"});
+    });
+
+    $("#printplan").addEventListener("click",function(){
+      var c=C();
+      var course=($("#p_course").value||"").trim();
+      var d=new Date();
+      var mon=["January","February","March","April","May","June","July",
+               "August","September","October","November","December"][d.getMonth()];
+      var out='<h1>Systems Thinking assessment plan</h1>'
+        +'<p class="pmeta">'+esc(course||"Course not stated")+' &middot; '+esc(c.n)
+        +'<br>SIM-ESD-ST-01 &middot; Prepared '+d.getDate()+' '+mon+' '+d.getFullYear()+'</p>';
+
+      $$(".pf").forEach(function(el){
+        var lab=$('label[for="'+el.id+'"]');
+        var name=lab?lab.textContent.replace(/\s+/g," ").trim():el.dataset.k;
+        var v=(el.value||"").trim();
+        out+='<div class="pitem"><p class="plab">'+esc(name)+'</p>'
+           +(v?'<p class="pval">'+esc(v)+'</p>'
+              :'<p class="pval pempty">Not completed</p>')+'</div>';
+      });
+
+      out+='<div class="pchecks"><h2>Before you file it</h2><ul>'
+        +'<li>Could a well-prepared student answer the assessed activity fully with a list and no drawn relationship? If yes, sharpen the boundary decision.</li>'
+        +'<li>If the group produced one shared map, can you still mark one named student? If no, the individual evidence is not doing its work.</li>'
+        +'<li>Could a student score full marks without using the competency? If yes, fix the brief, not the rubric.</li>'
+        +'</ul></div>'
+        +'<p class="pfoot">PEMACU ESD, Universiti Putra Malaysia &middot; Systems Thinking Competency Workbench</p>';
+
+      $("#printview").innerHTML=out;
+      window.print();
+    });
+
+    $("#copyplan").addEventListener("click",function(){
+      var out=["SYSTEMS THINKING ASSESSMENT PLAN","Cluster: "+CLUSTERS[ci].n,""];
+      $$(".pf").forEach(function(el){
+        var lab=$('label[for="'+el.id+'"]').textContent;
+        out.push(lab+": "+(el.value||"\u2014"));
+      });
+      copyText(out.join("\n"));
+    });
+    $("#clearplan").addEventListener("click",function(){
+      $$(".pf").forEach(function(el){ el.value=""; el.classList.remove("drafted"); store.set("plan_"+el.dataset.k,""); });
+      toast("Fields cleared");
+    });
+  }
+}
+
+/* ============ INIT ============ */
+buildPicker();
+buildNav();
+$("#menubtn").addEventListener("click",function(){
+  var r=$("#rail"), open=r.classList.toggle("open");
+  this.setAttribute("aria-expanded",open?"true":"false");
+});
+go(store.get("last","start"));
+window.addEventListener("beforeunload",function(){ store.set("last",current); });
+
+</script>
+
+</body>
+</html>
